@@ -58,7 +58,7 @@ namespace Lesson1
         {
             Console.Write("Enter n for odd check: ");
             int n = Convert.ToInt32(Console.ReadLine());
-            if(Odd(n))
+            if (Odd(n))
                 Console.WriteLine($"{n} is Odd number");
             else
                 Console.WriteLine($"{n} is not odd number");
@@ -88,7 +88,7 @@ namespace Lesson1
             Print("Hello!\n", ConsoleColor.Blue);
             Print("Hello!\n", 70, 70, ConsoleColor.Green);
         }
-        
+
         static bool IsTriangle(double a, double b, double c)
         {
             return a + b > c && a + c > b && b + c > a;
