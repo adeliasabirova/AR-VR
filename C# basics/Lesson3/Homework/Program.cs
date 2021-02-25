@@ -107,7 +107,8 @@ Choose what feature you want to test:
                 f = int.TryParse(Console.ReadLine(), out x);
                 if (f && !IsOdd(x) && x != 0)
                 {
-                    sum += x;
+                    if(x > 0)
+                        sum += x;
                 }
                 else if (!f) Console.WriteLine($"Inputed characters is not an integer. Quit.");
             } while (x != 0);
