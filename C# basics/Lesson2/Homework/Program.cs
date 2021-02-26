@@ -160,7 +160,6 @@ You should gain {(int)Weight(bmi,height,check.b2)} kg");
 You should lose {(int)Weight(bmi, height, check.b2)} kg");
         }
 
-        
 
         static int Sum(int a)
         {
@@ -169,29 +168,55 @@ You should lose {(int)Weight(bmi, height, check.b2)} kg");
 
         }
 
-        static bool IsEnumerable(int a)
+        static (bool, int) IsEnumerable(int a)
         {
-            if (a % Sum(a) == 0) return true;
-            else return false;
+            int d = Sum(a);
+            if (a % d == 0) return (true, a/d);
+            else return (false, 0);
         }
 
-        static int EnumerationLoop(int a)
+        static int Enumeration(int a)
         {
-            if (a == 10000) return 1;
-            else if (IsEnumerable(a)) return 1 + EnumerationLoop(a + 1);
-            else return EnumerationLoop(a + 1);
+            int count = 0;
+            bool dozens = true;
+            int dozen = 0;
+
+            (bool good, int d) aChecked = IsEnumerable(a);
+            if (aChecked.good)
+                while (dozens)
+                {
+                
+                    if (aChecked.d % 10 == 0 && dozens)
+                    {
+                        dozen++;
+                        aChecked.d /= 10;
+                    }
+                    else if (aChecked.d % 10 != 0)
+                        dozens = false;
+                    if (!dozens)
+                    {
+                        count = 1 + dozen;
+                    }
+                }     
+            return count;
         }
 
         static void Task6()
         {
             //Аделя Сабирова
-            // Не работает, начиная с 100000, ошибка StackOverflow, рекурсией не получается.
-            // НУЖНО ПЕРЕДЕЛАТЬ.
             //Написать программу подсчета количества «хороших» чисел в диапазоне от 1 до 1 000 000 000. 
             //«Хорошим» называется число, которое делится на сумму своих цифр.
             //Реализовать подсчёт времени выполнения программы, используя структуру DateTime.
+            int count = 0;
             DateTime start = DateTime.Now;
-            Console.WriteLine($"The \"Good numbers\" in range (1 - 10000) is {EnumerationLoop(1)}");
+
+            for (int i = 1 + (int)Math.Pow(10, 8); i<1+Math.Pow(10,9); i++)
+            {
+                if (i == Math.Pow(10, 9))
+                    Console.WriteLine("  ");
+                count += Enumeration(i);
+            }
+            Console.WriteLine($"The \"Good numbers\" in range (1 - 1000000000) is {count}");
             Console.WriteLine($"To check and count \"Good numbers\" the program spent {(DateTime.Now - start)}.");
         }
 
@@ -219,7 +244,7 @@ You should lose {(int)Weight(bmi, height, check.b2)} kg");
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Choose task to check: 1, 2, 3, 4, 5, 7");
+            Console.WriteLine("Choose task to check: 1, 2, 3, 4, 5, 6, 7");
             int task = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"You are checking {task} task.");
             switch (task)
@@ -234,8 +259,8 @@ You should lose {(int)Weight(bmi, height, check.b2)} kg");
                     break;
                 case 5: Task5();
                     break;
-                //case 6: Task6();
-                //    break;
+                case 6: Task6();
+                    break;
                 case 7: Task7();
                     break;
             }
