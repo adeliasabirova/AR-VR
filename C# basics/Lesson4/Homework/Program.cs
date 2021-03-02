@@ -81,10 +81,10 @@ namespace Homework
             Console.WriteLine($"Array: {array.ToString()}");
             foreach (KeyValuePair<int, int> keys in keyValues)
                 Console.WriteLine($"Element {keys.Key} has {keys.Value} entries");
-            int sum = array.Sum();
+            int sum = array.Sum;
             int[] inverse = array.Inverse();
             int[] multi = array.Multi(5);
-            int maxcount = array.MaxCount();           
+            int maxcount = array.MaxCount;           
             Console.WriteLine($@"Sum: {sum}
 Inverse: {Print(inverse)}
 Multi: {Print(multi)}

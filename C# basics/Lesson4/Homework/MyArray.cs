@@ -58,12 +58,15 @@ namespace Homework
             }
         }
 
-        public int Sum()
+        public int Sum
         {
-            int sum = 0;
-            for (int i = 0; i < this.array.Length; i++)
-                sum += this.array[i];
-            return sum;
+            get
+            {
+                int sum = 0;
+                for (int i = 0; i < this.array.Length; i++)
+                    sum += this.array[i];
+                return sum;
+            }
         }
 
         public int[] Inverse()
@@ -83,14 +86,17 @@ namespace Homework
             return this.array;
         }
 
-        public int MaxCount()
+        public int MaxCount
         {
-            int count = 0;
-            int max = this.Max;
-            for (int i =0; i<this.array.Length; i++)
-                if (this.array[i] == max)
-                    count++;
-            return count;
+            get
+            {
+                int count = 0;
+                int max = this.Max;
+                for (int i =0; i<this.array.Length; i++)
+                    if (this.array[i] == max)
+                        count++;
+                return count;
+            }
         }
 
         public override string ToString()
