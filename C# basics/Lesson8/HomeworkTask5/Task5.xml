@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Students>
+  <StudentInfo>
+    <Name>﻿Иван</Name>
+    <Surname>Иванов</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>3</Age>
+    <Course>20</Course>
+    <Group>3</Group>
+    <City>Нижнекамск</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Петр</Name>
+    <Surname>Сидоров</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>3</Age>
+    <Course>18</Course>
+    <Group>1</Group>
+    <City>Казань</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Мария</Name>
+    <Surname>Петрова</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>2</Age>
+    <Course>19</Course>
+    <Group>2</Group>
+    <City>Москва</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Александр</Name>
+    <Surname>Бойтцов</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>3</Age>
+    <Course>20</Course>
+    <Group>3</Group>
+    <City>Санкт-Петербург</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Марина</Name>
+    <Surname>Крепко</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>2</Age>
+    <Course>19</Course>
+    <Group>2</Group>
+    <City>Нижнекамск</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Надежда</Name>
+    <Surname>Жук</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>1</Age>
+    <Course>18</Course>
+    <Group>1</Group>
+    <City>Саратов</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Наталья</Name>
+    <Surname>Кунисова</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>3</Age>
+    <Course>21</Course>
+    <Group>3</Group>
+    <City>Самара</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Алина</Name>
+    <Surname>Йовович</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>6</Age>
+    <Course>24</Course>
+    <Group>6</Group>
+    <City>Томск</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Илья</Name>
+    <Surname>Иванов</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>4</Age>
+    <Course>22</Course>
+    <Group>4</Group>
+    <City>Новосибирск</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Анастасия</Name>
+    <Surname>Хоменко</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>5</Age>
+    <Course>23</Course>
+    <Group>5</Group>
+    <City>Челябинск</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Владимир</Name>
+    <Surname>Хромченко</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>1</Age>
+    <Course>20</Course>
+    <Group>3</Group>
+    <City>Варкута</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Дмитрий</Name>
+    <Surname>Карцев</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>2</Age>
+    <Course>19</Course>
+    <Group>2</Group>
+    <City>Сочи</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Александра</Name>
+    <Surname>Старикова</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>1</Age>
+    <Course>18</Course>
+    <Group>1</Group>
+    <City>Краснодар</City>
+  </StudentInfo>
+  <StudentInfo>
+    <Name>Анна</Name>
+    <Surname>Дукалис</Surname>
+    <University>КФУ</University>
+    <Faculty>Юриспруденция</Faculty>
+    <Department>Гражданское право</Department>
+    <Age>3</Age>
+    <Course>20</Course>
+    <Group>1</Group>
+    <City>Тверь</City>
+  </StudentInfo>
+</Students>
