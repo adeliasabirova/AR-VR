@@ -1,0 +1,17 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeBook"
+        xmlns:EmployeeControls="clr-namespace:EmployeeControls;assembly=EmployeeControls" x:Class="EmployeeBook.EmployeeEditor"
+        mc:Ignorable="d"
+        Title="Сотрудник" Height="300" Width="450">
+    <Grid>
+
+        <EmployeeControls:EmployeeControl x:Name="EmployeeControl" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="500"/>
+        <Button x:Name="bttnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="330,155,0,0" VerticalAlignment="Top" Width="98" Height="28" Click="bttnCancel_Click"/>
+        <Button x:Name="bttnOk" Content="Ок" HorizontalAlignment="Left" Margin="200,155,0,0" VerticalAlignment="Top" Width="98" Height="28" Click="bttnOk_Click"/>
+
+    </Grid>
+</Window>
