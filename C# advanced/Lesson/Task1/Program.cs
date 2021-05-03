@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Task1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Solution.Execution();
+            Solution.Sort();
+            Console.WriteLine("Список сотрудников со среднемесячной зарплатой.");
+            Solution.PrintToConsole();
+
+            Console.ReadKey();
+        }
+    }
+}
