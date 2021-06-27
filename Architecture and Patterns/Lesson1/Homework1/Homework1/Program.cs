@@ -1,43 +1,44 @@
 ﻿using System;
+using System.Numerics;
 
 namespace Homework1
 {
     class MathProgram
     {
-        private int number;
-        public bool _IsInt { get; private set; }
+        private int _number;
+        public bool IsInt { get; private set; }
 
         public MathProgram()
         {
-            number = 0;
-            _IsInt = true;
+            _number = 0;
+            IsInt = true;
         }
 
         public MathProgram(string number)
         {
-            _IsInt = Int32.TryParse(number, out this.number);
+            IsInt = Int32.TryParse(number, out _number);
         }
 
-        public long Factorial() 
+        public BigInteger Factorial() 
         {
-            long factorial = 1;
-            for (int i = 1; i <= number; i++)
+            BigInteger factorial = 1;
+            for (int i = 1; i <= _number; i++)
                 factorial *= i;
             return factorial;
         }
 
-        public int SumFrom1toNumber()
+        public BigInteger SumFrom1toNumber()
         {
-            int summa = 0;
-            for (int i = 1; i <= number; i++)
+            BigInteger summa = 0;
+            for (int i = 1; i <= _number; i++)
                 summa += i;
             return summa;
         }
 
-        public int MaxEvenNumber()
+        public BigInteger MaxEvenNumber()
         {
-            int max = 0;
-            for (int i = 1; i <= number; i++)
+            BigInteger max = 0;
+            for (int i = 1; i <= _number; i++)
                 if(i%2 == 0)
                     max = i;
             return max;
@@ -58,7 +59,7 @@ namespace Homework1
 
             MathProgram mathProgram = new MathProgram(number);
 
-            if (mathProgram._IsInt)
+            if (mathProgram.IsInt)
             {
                 Console.WriteLine($"Факториал равен {mathProgram.Factorial()}");
                 Console.WriteLine($"Сума от 1 до N равна {mathProgram.SumFrom1toNumber()}");
