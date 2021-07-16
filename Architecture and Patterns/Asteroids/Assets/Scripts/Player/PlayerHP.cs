@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Asteroids
 {
-    internal sealed class PlayerHP : IPlayer
+    internal sealed class PlayerHP 
     {
         private readonly float _maxHP = 100.0f;
         private Health _health;

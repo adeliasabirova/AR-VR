@@ -7,7 +7,7 @@ namespace Asteroids
     internal sealed class AccelerationMove : MoveTransform
     {
         private readonly float _acceleration;
-        public AccelerationMove(Rigidbody2D rigidbody, float speed, float acceleration) : base(rigidbody, speed)
+        public AccelerationMove(Transform unit, float speed, float acceleration) : base(unit, speed)
         {
             _acceleration = acceleration;
         }

@@ -4,35 +4,33 @@ namespace Asteroids
 {
     internal sealed class EnemyShip : Enemy
     {
-        private IMoveEnemy _moveShipEnemy;
-        private Transform _targetTransform;
+        private float _stoppingDistance = 1f;
+        private Vector3 _moveVector;
 
-        private void Start()
+        public override void Move(Vector3 position, float deltaTime)
         {
-            _targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
-            _moveShipEnemy = new MoveEnemyShip(transform, Random.Range(2.0f, 6.0f), 1f);
+            base.Move(position, deltaTime);
+            if ((transform.position - position).sqrMagnitude >= _stoppingDistance)
+            {
+                var direction = (position - transform.localPosition).normalized;
+                var speed = Speed * deltaTime;
+                _moveVector = direction * speed;
+            }
+            else
+            {
+                _moveVector = Vector3.zero;
+            }
+            transform.localPosition += _moveVector;
         }
 
-        private void Update()
+        public override void OnTriggerEvent()
         {
-            _moveShipEnemy.Move(_targetTransform.position, Time.deltaTime);
-        }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            Health.ChangeCurrentHealth(10);
-        }
-
-
-        private void OnBecameInvisible()
-        {
+            base.OnTriggerEvent();
             Destroy(gameObject);
         }
 
-        public void DependencyInjectHealth(Health hp)
-        {
-            Health = hp;
-        }
+
+
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Asteroids
 {
@@ -16,34 +17,21 @@ namespace Asteroids
             _idEnemy = id;
         }
 
-        public void DependencyInjectHealth(Health hp)
+        public override void Move(Vector3 position, float deltaTime)
         {
-            Health = hp;
+            base.Move(position, deltaTime);
+            transform.position += Vector3.down * Speed * deltaTime;
         }
+
+        public override void OnTriggerEvent()
+        {
+            base.OnTriggerEvent();
+            ReturnToPool();
+        }
+
         private void ReturnToPool()
         {
             ServiceLocator.Resolve<IViewService>().Destroy(_idEnemy, _prefab);
         }
-
-        private void Start()
-        {            
-            _moveAsteroid = new MoveAsteroid(transform, Random.Range(5.0f, 8.0f));
-        }
-
-        private void Update()
-        {
-            _moveAsteroid.Move(transform.position, Time.deltaTime);
-        }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            ReturnToPool();
-        }
-
-        private void OnBecameInvisible()
-        {
-            ReturnToPool();
-        }
-
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace Asteroids
 {
-    internal sealed class CameraController
+    internal sealed class CameraController : ILateExecute
     {
         private readonly Transform _target;
         private readonly Transform _camera;

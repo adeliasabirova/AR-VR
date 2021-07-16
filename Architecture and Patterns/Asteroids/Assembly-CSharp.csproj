@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{70261382-45EB-0236-7EA2-855FCD841B8F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -56,45 +57,72 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Logic\UserInput\PCInputShift.cs" />
     <Compile Include="Assets\Scripts\Logic\Movement\RotateShip.cs" />
+    <Compile Include="Assets\Scripts\Interface\Movement\IMove.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyObjectPool.cs" />
     <Compile Include="Assets\Scripts\Logic\Extensions\ObjectExtensions.cs" />
-    <Compile Include="Assets\Scripts\Interface\IRotate.cs" />
-    <Compile Include="Assets\Scripts\Logic\Movement\MoveComet.cs" />
+    <Compile Include="Assets\Scripts\Interface\Movement\IRotate.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Logic\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Controllers\InputInitialization.cs" />
+    <Compile Include="Assets\Scripts\Logic\UserInput\PCInputVertical.cs" />
+    <Compile Include="Assets\Scripts\Interface\Controllers\ILateExecute.cs" />
+    <Compile Include="Assets\Scripts\Interface\Bullet\IBullet.cs" />
+    <Compile Include="Assets\Scripts\Interface\InputProxy\IUserMouseInputProxy.cs" />
     <Compile Include="Assets\Scripts\Enemy\Comet.cs" />
+    <Compile Include="Assets\Scripts\Logic\Timer.cs" />
+    <Compile Include="Assets\Scripts\Interface\Bullet\IBulletObjectPool.cs" />
     <Compile Include="Assets\Scripts\Logic\ObjectPool\ViewService.cs" />
+    <Compile Include="Assets\Scripts\Controllers\BulletInitialization.cs" />
+    <Compile Include="Assets\Scripts\Interface\Enemy\IEnemyObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Interface\Player\IPlayer.cs" />
+    <Compile Include="Assets\Scripts\Interface\Enemy\IEnemy.cs" />
+    <Compile Include="Assets\Scripts\Interface\ITimer.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHP.cs" />
-    <Compile Include="Assets\Scripts\Interface\IEnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\Interface\Enemy\IEnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\Interface\Controllers\IInitialize.cs" />
     <Compile Include="Assets\Scripts\Enemy\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Interface\IMoveEnemy.cs" />
-    <Compile Include="Assets\Scripts\Logic\KeyBoard\KeyShiftPressed.cs" />
+    <Compile Include="Assets\Scripts\Controllers\GameInitialization.cs" />
+    <Compile Include="Assets\Scripts\Logic\UserInput\PCInputHorizontal.cs" />
+    <Compile Include="Assets\Scripts\Controllers\MoveController.cs" />
     <Compile Include="Assets\Scripts\Amunition\BulletAmmunition.cs" />
+    <Compile Include="Assets\Scripts\Logic\Movement\CompositeMove.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Data\BulletData.cs" />
     <Compile Include="Assets\Scripts\GameStarter.cs" />
-    <Compile Include="Assets\Scripts\Logic\Movement\MoveAsteroid.cs" />
-    <Compile Include="Assets\Scripts\Logic\Movement\MoveEnemyShip.cs" />
-    <Compile Include="Assets\Scripts\Amunition\Bullet.cs" />
-    <Compile Include="Assets\Scripts\Interface\IBullet.cs" />
-    <Compile Include="Assets\Scripts\Logic\KeyBoard\KeyButtonPressed.cs" />
+    <Compile Include="Assets\Scripts\Interface\Data\IUnit.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyType.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Controllers\PlayerInitialization.cs" />
+    <Compile Include="Assets\Scripts\Data\Data.cs" />
+    <Compile Include="Assets\Scripts\Data\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Interface\InputProxy\IUserKeyInputProxy.cs" />
+    <Compile Include="Assets\Scripts\Interface\Controllers\IController.cs" />
+    <Compile Include="Assets\Scripts\Interface\Controllers\IExecute.cs" />
+    <Compile Include="Assets\Scripts\Interface\Player\IPlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Controllers\EnemyMoveController.cs" />
     <Compile Include="Assets\Scripts\Logic\Health.cs" />
-    <Compile Include="Assets\Scripts\Logic\InputController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\InputController.cs" />
     <Compile Include="Assets\Scripts\Interface\IInputController.cs" />
     <Compile Include="Assets\Scripts\Logic\Movement\AccelerationMove.cs" />
-    <Compile Include="Assets\Scripts\Interface\IPlayer.cs" />
+    <Compile Include="Assets\Scripts\Controllers\EnemyInitialization.cs" />
+    <Compile Include="Assets\Scripts\Logic\UserInput\PCInputFire.cs" />
+    <Compile Include="Assets\Scripts\Data\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Logic\ServiceLocator.cs" />
     <Compile Include="Assets\Scripts\Amunition\Ammunition.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyShip.cs" />
-    <Compile Include="Assets\Scripts\Logic\Movement\MoveEnemy.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
-    <Compile Include="Assets\Scripts\Enemy\EnemyShipFactory.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyFactory.cs" />
+    <Compile Include="Assets\Scripts\Interface\InputProxy\IUserInputProxy.cs" />
+    <Compile Include="Assets\Scripts\Amunition\BulletObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Logic\Managers\InputManager.cs" />
     <Compile Include="Assets\Scripts\Logic\Movement\MoveTransform.cs" />
     <Compile Include="Assets\Scripts\Enemy\Asteroid.cs" />
-    <Compile Include="Assets\Scripts\Interface\IMove.cs" />
-    <Compile Include="Assets\Scripts\Player\Ship.cs" />
+    <Compile Include="Assets\Scripts\Controllers\Controllers.cs" />
     <Compile Include="Assets\Scripts\Logic\Extensions\BuilderExtensions.cs" />
-    <Compile Include="Assets\Scripts\Logic\Timer.cs" />
-    <Compile Include="Assets\Scripts\Interface\ITimer.cs" />
-    <Compile Include="Assets\Scripts\Logic\ServiceLocator.cs" />
+    <Compile Include="Assets\Scripts\Player\Ship.cs" />
+    <Compile Include="Assets\Scripts\Interface\Movement\IMoveEnemy.cs" />
+    <Compile Include="Assets\Scripts\Interface\Controllers\ICleanup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
