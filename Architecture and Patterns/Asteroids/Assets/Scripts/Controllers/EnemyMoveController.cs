@@ -48,8 +48,11 @@ namespace Asteroids
             foreach (var enemy in enemyToRemove)
             {
                 _enemies.Remove(enemy);
-                enemy.OnTriggerEvent();
+                enemy.OnTriggerEnterChange -= EnemyOnOnTriggerEnterChange;
+                enemy.OnTriggerEvent();                
             }
+
+            enemyToRemove.Clear();
         }
 
         public void Cleanup()

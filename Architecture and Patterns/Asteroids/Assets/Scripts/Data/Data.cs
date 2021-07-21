@@ -1,11 +1,13 @@
+using System;
 using System.Collections;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Asteroids
 {
-
+    [Serializable]
     [CreateAssetMenu(fileName ="Data", menuName = "Data/Data")]
     public sealed class Data : ScriptableObject
     {

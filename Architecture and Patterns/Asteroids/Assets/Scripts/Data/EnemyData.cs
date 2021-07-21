@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Asteroids
 {
+    [Serializable]
     [CreateAssetMenu(fileName ="EnemySettings", menuName ="Data/Unit/EnemySettings")]
     public sealed class EnemyData : ScriptableObject
     {
