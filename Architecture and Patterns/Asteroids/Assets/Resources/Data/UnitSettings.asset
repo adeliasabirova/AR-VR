@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: UnitSettings
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 2554738129826764648, guid: a0e732255b5f63e479cbe370753d7cb8, type: 3}
+  _barrelPosition: {fileID: 0}
   _speed: 10
   _acceleration: 3
