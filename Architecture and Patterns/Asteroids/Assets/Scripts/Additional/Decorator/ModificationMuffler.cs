@@ -5,6 +5,8 @@ namespace Asteroids.Decorator
     internal sealed class ModificationAim : ModificationWeapon
     {
         private readonly IAim _aim;
+        private RaycastHit2D _hit;
+        private GameObject _aimGameObject;
 
         public ModificationAim(IAim aim)
         {
@@ -13,17 +15,24 @@ namespace Asteroids.Decorator
 
         protected override Weapon AddModification(Weapon weapon)
         {
-            throw new System.NotImplementedException();
+            Vector3 _aimPosition = _aim.Position.position + _aim.DistanceFromGun * Vector3.forward;
+            _aimGameObject = Object.Instantiate(_aim.AimInstance,
+            _aimPosition, Quaternion.identity);
+            return weapon;
         }
 
         protected override Weapon RemoveModification(Weapon weapon, AudioClip audioClip, Transform barrelPosition)
         {
-            throw new System.NotImplementedException();
+            weapon.SetAudioClip(audioClip);
+            weapon.SetBarrelPosition(barrelPosition);
+            Object.Destroy(_aimGameObject);
+            return weapon;
         }
 
         protected override Weapon RemoveModification(Weapon weapon)
         {
-            throw new System.NotImplementedException();
+            Object.Destroy(_aimGameObject);
+            return weapon;
         }
     }
     internal sealed class ModificationMuffler : ModificationWeapon
@@ -59,6 +68,7 @@ namespace Asteroids.Decorator
 
         protected override Weapon RemoveModification(Weapon weapon)
         {
+            Object.Destroy(_mufflerGameObject);
             return weapon;
         }
     }

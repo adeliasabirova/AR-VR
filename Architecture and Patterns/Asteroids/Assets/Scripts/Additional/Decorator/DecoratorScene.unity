@@ -280,6 +280,10 @@ PrefabInstance:
       value: Starter
       objectReference: {fileID: 0}
     - target: {fileID: 8514508847147074325, guid: 86887ccba31c5dc47af7242575a87773, type: 3}
+      propertyPath: _aim
+      value: 
+      objectReference: {fileID: 9091975905145567330, guid: 8a5d62599cf0fb544acb84a80be8a780, type: 3}
+    - target: {fileID: 8514508847147074325, guid: 86887ccba31c5dc47af7242575a87773, type: 3}
       propertyPath: _bullet
       value: 
       objectReference: {fileID: 961142965652847737, guid: eb9d3b403fb748c45aed473fc34a28f8, type: 3}
@@ -295,6 +299,10 @@ PrefabInstance:
       propertyPath: _barrelPosition
       value: 
       objectReference: {fileID: 1326725158}
+    - target: {fileID: 8514508847147074325, guid: 86887ccba31c5dc47af7242575a87773, type: 3}
+      propertyPath: _distanceFromGun
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8514508847147074325, guid: 86887ccba31c5dc47af7242575a87773, type: 3}
       propertyPath: _volumeFireOnMuffler
       value: 0.5

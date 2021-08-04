@@ -17,7 +17,12 @@ namespace Asteroids.Decorator
         [SerializeField] private Transform _barrelPositionMuffler;
         [SerializeField] private GameObject _muffler;
 
+        [Header("Aim Gun")]
+        [SerializeField] private GameObject _aim;
+        [SerializeField] private float _distanceFromGun;
+
         private ModificationWeapon _modificationWeapon;
+        private ModificationWeapon _modificationWeaponAim;
         private Weapon _weapon;
 
         private void Start()
@@ -29,7 +34,11 @@ namespace Asteroids.Decorator
             _barrelPosition, _muffler);
             _modificationWeapon = new ModificationMuffler(_audioSource, muffler, _barrelPositionMuffler.position);
             _modificationWeapon.ApplyModification(_weapon);
+            var aim = new Aim(_barrelPosition, _aim, _distanceFromGun);
+            _modificationWeaponAim = new ModificationAim(aim);
+            _modificationWeaponAim.ApplyModification(_weapon);
             _fire = _modificationWeapon;
+
         }
         private void Update()
         {
@@ -38,9 +47,10 @@ namespace Asteroids.Decorator
                 _fire.Fire();
             }
 
-            if(Time.time > 3.0f)
+            if(Time.time > 5.0f)
             {
                 _modificationWeapon.DeleteModification(_weapon, _audioClip, _barrelPosition);
+                _modificationWeaponAim.DeleteModification(_weapon);
             }
         }
 
