@@ -33,5 +33,10 @@ namespace Asteroids
         {
             ServiceLocator.Resolve<IViewService>().Destroy(_idEnemy, _prefab);
         }
+
+        protected override int Weight()
+        {
+            return 3 * base.Weight();
+        }
     }
 }

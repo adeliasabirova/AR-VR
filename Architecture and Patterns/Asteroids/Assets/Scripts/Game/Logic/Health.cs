@@ -16,7 +16,7 @@ namespace Asteroids
 
         public void ChangeCurrentHealth(float hp)
         {
-            CurrentHP = hp;
+            CurrentHP -= hp;
         }
     }
 }

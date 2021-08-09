@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Asteroids
 {
@@ -10,6 +12,19 @@ namespace Asteroids
     {
         private Health _health;
         private bool _isDestroyed = false;
+        private IScore _player;
+        private List<IAbility> _ability;
+        public List<IAbility> Ability
+        {
+            get => _ability;
+            set => _ability = value;
+        }
+        
+        public IScore Player
+        {
+            get => _player;
+            set => _player = value;
+        }
         public Health Health
         {
             get
@@ -29,12 +44,27 @@ namespace Asteroids
         {
         }
 
+        protected virtual int Weight()
+        {
+            return 100;
+        }
         public float Speed { get; set; }
+
+        public int MaxDamage => _ability.Select(a => a.Damage).Max();
+
+        public int NumberOfAbilities => _ability.Count;
+
+        public IAbility this[int index] => _ability[index];
 
         public virtual void OnCollisionEnter2D(Collision2D collision)
         {
             _isDestroyed = true;
             OnTriggerEnterChange?.Invoke(gameObject.GetInstanceID());
+            Debug.Log("Enemy is destroied.");
+            if(!collision.gameObject.TryGetComponent<IScore>(out var component))
+            {
+                _player.ScoreCalculate(Weight());
+            }
         }
 
         public virtual void OnBecameInvisible()
@@ -48,5 +78,33 @@ namespace Asteroids
         {
             return gameObject.GetInstanceID();
         }
+
+        public IEnumerable<IAbility> GetAbility()
+        {
+            while (true)
+            {
+                yield return _ability[Random.Range(0, _ability.Count)];
+            }
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < _ability.Count; i++)
+            {
+                yield return _ability[i];
+            }
+        }
+
+        public IEnumerable<IAbility> GetAbility(DamageType index)
+        {
+            foreach (IAbility ability in _ability)
+            {
+                if (ability.DamageType == index)
+                {
+                    yield return ability;
+                }
+            }
+        }
+
     }
 }

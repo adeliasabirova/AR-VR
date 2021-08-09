@@ -30,7 +30,10 @@ namespace Asteroids
         }
 
 
-
+        protected override int Weight()
+        {
+            return 5 * base.Weight();
+        }
     }
 }
 

@@ -16,6 +16,7 @@ namespace Asteroids
             var player = Object.Instantiate(_playerData.GetPlayer());
             var playerComponent = player.GetComponent<Player>();
             playerComponent.Health = new Health(100.0f, 100.0f);
+            playerComponent.Defense = 1;
             return player;
         }
 

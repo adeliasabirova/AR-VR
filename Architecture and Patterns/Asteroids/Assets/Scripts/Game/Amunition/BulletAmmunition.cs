@@ -16,6 +16,7 @@ namespace Asteroids
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            
             ReturnToPool();
         }
     }
