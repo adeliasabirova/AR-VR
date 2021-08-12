@@ -9,10 +9,10 @@ namespace Asteroids
         [SerializeField] private Text _textScore;
         [SerializeField] private Text _textDamage;
 
-        public override void Execute(Dictionary<string, string> list)
+        public override void Execute(Dictionary<string, string> dictionary)
         {
-            _textScore.text = "Score: " + list["score"];
-            _textDamage.text = "Damage: " + list["damage"];
+            _textScore.text = "Score: " + dictionary["score"];
+            _textDamage.text = "Damage: " + dictionary["damage"];
             gameObject.SetActive(true);
         }
 

@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Game\Logic\UserInput\PCInputShift.cs" />
     <Compile Include="Assets\Scripts\Game\Logic\Movement\RotateShip.cs" />
     <Compile Include="Assets\Scripts\Additional\Bridge\FlatteringAttack.cs" />
+    <Compile Include="Assets\Scripts\Game\Logic\InfoCreation.cs" />
     <Compile Include="Assets\Scripts\Game\Interface\Movement\IMove.cs" />
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyObjectPool.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\IMuffler.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\Game\Logic\Timer.cs" />
     <Compile Include="Assets\Scripts\Game\Interface\Bullet\IBulletObjectPool.cs" />
     <Compile Include="Assets\Scripts\Game\Logic\ObjectPool\ViewService.cs" />
+    <Compile Include="Assets\Scripts\Game\Logic\ConsoleDisplay.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\BulletInitialization.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\Bullet.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\IAmmunition.cs" />
@@ -109,6 +111,7 @@
     <Compile Include="Assets\Scripts\Game\Enemy\EnemyType.cs" />
     <Compile Include="Assets\Scripts\Additional\Memento\TimeBody.cs" />
     <Compile Include="Assets\Scripts\Game\Player\PlayerFactory.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\UIInitializationOne.cs" />
     <Compile Include="Assets\Scripts\Additional\Composite\MagFactory.cs" />
     <Compile Include="Assets\Scripts\Additional\Bridge\Infantry.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\PlayerInitialization.cs" />
@@ -135,6 +138,7 @@
     <Compile Include="Assets\Scripts\Game\Interface\IInputController.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\Example.cs" />
     <Compile Include="Assets\Scripts\Game\Logic\Movement\AccelerationMove.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\UIInitializationTwo.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\EnemyInitialization.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\IAim.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\PlayerModificationController.cs" />
@@ -144,6 +148,7 @@
     <Compile Include="Assets\Scripts\Game\Logic\UserInput\PCInputFire.cs" />
     <Compile Include="Assets\Scripts\Game\Data\EnemyData.cs" />
     <Compile Include="Assets\Scripts\Additional\Composite\UnitType.cs" />
+    <Compile Include="Assets\Scripts\Game\Interface\Enemy\IDealingCreate.cs" />
     <Compile Include="Assets\Scripts\Game\Logic\ServiceLocator.cs" />
     <Compile Include="Assets\Scripts\Game\Amunition\Ammunition.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\Muffler.cs" />
@@ -155,7 +160,8 @@
     <Compile Include="Assets\Scripts\Game\Interface\Enemy\IAbility.cs" />
     <Compile Include="Assets\Scripts\Additional\Decorator\ModificationMuffler.cs" />
     <Compile Include="Assets\Scripts\Game\Logic\Movement\MoveTransform.cs" />
-    <Compile Include="Assets\Scripts\Game\Enemy\Ability.cs" />
+    <Compile Include="Assets\Scripts\Game\UI\PanelTwo.cs" />
+    <Compile Include="Assets\Scripts\Game\Logic\Ability.cs" />
     <Compile Include="Assets\Scripts\Additional\Bridge\Example.cs" />
     <Compile Include="Assets\Scripts\Additional\Composite\UnitInfo.cs" />
     <Compile Include="Assets\Scripts\Game\Controllers\UIInitialization.cs" />
@@ -170,6 +176,11 @@
     <Compile Include="Assets\Scripts\Game\Interface\Movement\IMoveEnemy.cs" />
     <Compile Include="Assets\Scripts\Game\Interface\Controllers\ICleanup.cs" />
     <Compile Include="Assets\Scripts\Additional\Bridge\IAttack.cs" />
+    <Compile Include="Assets\Scripts\Additional\Decorator\ModificationAim.cs" />
+    <Compile Include="Assets\Scripts\Game\Logic\State\RelaxState.cs" />
+    <Compile Include="Assets\Scripts\Game\Logic\State\State.cs" />
+    <Compile Include="Assets\Scripts\Game\Logic\State\FireState.cs" />
+    <Compile Include="Assets\Scripts\Game\Controllers\FireStateController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

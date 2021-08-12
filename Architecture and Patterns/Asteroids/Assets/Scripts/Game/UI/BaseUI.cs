@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace Asteroids
 {
-    internal abstract class BaseUI : MonoBehaviour
+    public abstract class BaseUI : MonoBehaviour
     {
-        public abstract void Execute(Dictionary<string, string> list);
+        public abstract void Execute(Dictionary<string, string> dictionary);
         public abstract void Cancel();
     }
 }
