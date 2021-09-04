@@ -26,24 +26,43 @@ namespace Asteroids
             foreach (var enemy in _getEnemies)
             {
                 enemy.OnTriggerEnterChange += EnemyOnOnTriggerEnterChange;
+                enemy.OnBecomeInvisibleChange += EnemyOnBecomeInvisibleChange;
             }
 
             _move.Move(_targetPosition, deltaTime);
         }
 
-
-        private void EnemyOnOnTriggerEnterChange(int obj)
+        private List<IEnemy> EnemyChange(int obj)
         {
             List<IEnemy> enemyToRemove = new List<IEnemy>();
-            foreach(var enemy in _getEnemies)
+            foreach (var enemy in _getEnemies)
             {
                 if (enemy.GetInstanceIDEnemy() == obj)
                 {
                     _enemy.RemoveUnit(enemy);
                     enemyToRemove.Add(enemy);
-                }
 
+                }
             }
+            return enemyToRemove;
+        }
+
+        private void EnemyOnBecomeInvisibleChange(int obj)
+        {
+            var enemyToRemove = EnemyChange(obj);
+            foreach (var enemy in enemyToRemove)
+            {
+                enemy.OnTriggerEnterChange -= EnemyOnOnTriggerEnterChange;
+                _enemies.Remove(enemy);
+                enemy.OnTriggerEvent();
+            }
+
+            enemyToRemove.Clear();
+        }
+
+        private void EnemyOnOnTriggerEnterChange(int obj)
+        {
+            var enemyToRemove = EnemyChange(obj);
 
             foreach (var enemy in enemyToRemove)
             {

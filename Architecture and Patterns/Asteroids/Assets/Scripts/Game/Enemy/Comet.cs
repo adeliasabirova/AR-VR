@@ -17,6 +17,11 @@ namespace Asteroids
             base.OnTriggerEvent();
             Destroy(gameObject);
         }
+
+        protected override int Weight()
+        {
+            return 2*base.Weight();
+        }
     }
 }
 

@@ -30,7 +30,10 @@ namespace Asteroids
         public void Execute(float deltaTime)
         {
             if (_fireDown)
-                _bulletObjectPool.CreateBullet(_unit.position, _unit.rotation, _unit.up);
+            {
+                var bullet = _bulletObjectPool.CreateBullet(_unit.position, _unit.rotation, _unit.up);
+                bullet.Activate(new ConsoleDisplay(), _unit.position);
+            }
         }
 
         public void Cleanup()

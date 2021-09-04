@@ -7,12 +7,19 @@ namespace Asteroids
     internal sealed class GameStarter : MonoBehaviour
     {
         [SerializeField] private Data _data;
+        [SerializeField] private PanelOne _panelOne;
+        [SerializeField] private PanelTwo _panelTwo;
         private Controllers _controllers;
 
         private void Start()
         {
             _controllers = new Controllers();
-            new GameInitialization(_controllers, _data);
+            var dictionary = new Dictionary<string, BaseUI>
+            {
+                { "first", _panelOne },
+                { "second", _panelTwo }
+            };
+            new GameInitialization(_controllers, _data, dictionary);
             _controllers.Initialize();
         }
 

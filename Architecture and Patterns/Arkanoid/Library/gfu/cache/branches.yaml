@@ -1,0 +1,211 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1666186674, guid: 68c7e4565cde54155bb78d8e935f1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cacheType: 2
+  lastUpdatedAtString: 2021-08-15T09:00:03.054+03:00
+  initializedAtString: 2021-08-15T08:55:11.190+03:00
+  localBranches:
+  - name: lesson1
+    tracking: origin/lesson1
+  - name: lesson10
+    tracking: origin/lesson10
+  - name: lesson2
+    tracking: origin/lesson2
+  - name: lesson3
+    tracking: origin/lesson3
+  - name: lesson5
+    tracking: origin/lesson5
+  - name: lesson6
+    tracking: origin/lesson6
+  - name: lesson8
+    tracking: origin/lesson8
+  - name: lesson9
+    tracking: origin/lesson9
+  - name: main
+    tracking: origin/main
+  remoteBranches:
+  - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/lesson1
+    tracking: '[None]'
+  - name: origin/lesson10
+    tracking: '[None]'
+  - name: origin/lesson2
+    tracking: '[None]'
+  - name: origin/lesson3
+    tracking: '[None]'
+  - name: origin/lesson4
+    tracking: '[None]'
+  - name: origin/lesson5
+    tracking: '[None]'
+  - name: origin/lesson6
+    tracking: '[None]'
+  - name: origin/lesson7
+    tracking: '[None]'
+  - name: origin/lesson8
+    tracking: '[None]'
+  - name: origin/lesson9
+    tracking: '[None]'
+  - name: origin/main
+    tracking: '[None]'
+  remotes:
+  - name: origin
+    url: https://github.com/AdeliaSabirova/AR-VR.git
+    login: 
+    user: 
+    host: 
+    function: 0
+    token: 
+  localConfigBranches:
+    keys:
+    - lesson1
+    - lesson10
+    - lesson2
+    - lesson3
+    - lesson5
+    - lesson6
+    - lesson8
+    - lesson9
+    - main
+    values:
+    - name: lesson1
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson1
+    - name: lesson10
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson10
+    - name: lesson2
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson2
+    - name: lesson3
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson3
+    - name: lesson5
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson5
+    - name: lesson6
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson6
+    - name: lesson8
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson8
+    - name: lesson9
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: lesson9
+    - name: main
+      remote:
+        name: origin
+        url: https://github.com/AdeliaSabirova/AR-VR.git
+      trackingBranch: main
+  remoteConfigBranches:
+    keys:
+    - origin
+    subKeys:
+    - Values:
+      - HEAD
+      - lesson1
+      - lesson10
+      - lesson2
+      - lesson3
+      - lesson4
+      - lesson5
+      - lesson6
+      - lesson7
+      - lesson8
+      - lesson9
+      - main
+    subKeyValues:
+    - Values:
+      - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson1
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson10
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson2
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson3
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson4
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson5
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson6
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson7
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson8
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: lesson9
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+      - name: main
+        remote:
+          name: origin
+          url: https://github.com/AdeliaSabirova/AR-VR.git
+        trackingBranch: 
+  configRemotes:
+    keys:
+    - origin
+    values:
+    - name: origin
+      url: https://github.com/AdeliaSabirova/AR-VR.git
