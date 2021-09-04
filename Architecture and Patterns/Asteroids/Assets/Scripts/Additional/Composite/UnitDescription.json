@@ -1,0 +1,17 @@
+{
+    "Items": [
+        {
+            "type": "mag",
+            "health": "100"
+        },
+    
+        {
+            "type": "infantry",
+            "health": "150"
+        },
+        {
+            "type": "mag",
+            "health": "50"
+        }
+    ]
+}
