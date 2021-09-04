@@ -24,6 +24,7 @@ namespace Asteroids
             _horizontal.GetAxis();
             _vertical.GetAxis();
             _fire.GetButtonDown();
+            _fire.GetButtonUp();
             _leftShift.GetKeyDown();
             _leftShift.GetKeyUp();
         }

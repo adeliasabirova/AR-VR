@@ -8,12 +8,18 @@ namespace Asteroids
     {
         [SerializeField] private Data _data;
         [SerializeField] private PanelOne _panelOne;
+        [SerializeField] private PanelTwo _panelTwo;
         private Controllers _controllers;
 
         private void Start()
         {
             _controllers = new Controllers();
-            new GameInitialization(_controllers, _data, _panelOne);
+            var dictionary = new Dictionary<string, BaseUI>
+            {
+                { "first", _panelOne },
+                { "second", _panelTwo }
+            };
+            new GameInitialization(_controllers, _data, dictionary);
             _controllers.Initialize();
         }
 

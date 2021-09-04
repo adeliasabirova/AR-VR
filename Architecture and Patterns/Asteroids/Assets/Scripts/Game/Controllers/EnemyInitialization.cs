@@ -5,7 +5,8 @@ using Random = UnityEngine.Random;
 
 namespace Asteroids
 {
-    internal sealed class EnemuInitialization : IInitialize, IExecute
+
+    internal sealed class EnemyInitialization : IInitialize, IExecute
     {
         private readonly IEnemyFactory _enemyFactory;
         private readonly IEnemyObjectPool _enemyObjectPool;
@@ -17,7 +18,7 @@ namespace Asteroids
         private Timer _enemyShipTimer;
         private List<IEnemy> _enemies;
 
-        public EnemuInitialization(IEnemyFactory enemyFactory, IEnemyObjectPool enemyObjectPool, EnemyData data, Camera camera, int capacityEnemy)
+        public EnemyInitialization(IEnemyFactory enemyFactory, IEnemyObjectPool enemyObjectPool, EnemyData data, Camera camera, int capacityEnemy)
         {
             _enemyFactory = enemyFactory;
             _enemyObjectPool = enemyObjectPool;
@@ -58,25 +59,31 @@ namespace Asteroids
             }
         }
 
+        private void EnemyExecution(IEnemy enemy, Vector3 position)
+        {
+            _enemyMove.AddUnit(enemy);
+            _enemies.Add(enemy);
+            enemy.Activate(new ConsoleDisplay(), position);
+        }
         public void Execute(float deltaTime)
         {
             if (_cometTimer.Tick(deltaTime))
             {
-                var enemy = _enemyFactory.CreateEnemy(EnemyType.Comet, new Vector3(Random.Range(-5f, 1f) + _camera.transform.position.x, 5f + _camera.transform.position.y, 0f), Random.Range(5.0f, 10.0f));
-                _enemyMove.AddUnit(enemy);
-                _enemies.Add(enemy);
+                var position = new Vector3(Random.Range(-5f, 1f) + _camera.transform.position.x, 5f + _camera.transform.position.y, 0f);
+                var enemy = _enemyFactory.CreateEnemy(EnemyType.Comet, position, Random.Range(5.0f, 10.0f));
+                EnemyExecution(enemy, position);
             }
             if (_enemyShipTimer.Tick(deltaTime))
             {
-                var enemy = _enemyFactory.CreateEnemy(EnemyType.EnemyShip, new Vector3(Random.Range(-5f, 1f) + _camera.transform.position.x, Random.Range(-5f, 1f) + +_camera.transform.position.y, 0f), Random.Range(2.0f, 6.0f));
-                _enemyMove.AddUnit(enemy);
-                _enemies.Add(enemy);
+                var position = new Vector3(Random.Range(-5f, 1f) + _camera.transform.position.x, Random.Range(-5f, 1f) + +_camera.transform.position.y, 0f);
+                var enemy = _enemyFactory.CreateEnemy(EnemyType.EnemyShip, position, Random.Range(2.0f, 6.0f));
+                EnemyExecution(enemy, position);
             }
             if (_asteroidTimer.Tick(deltaTime))
             {
-                var enemy = _enemyObjectPool.CreateEnemy(new Vector3(Random.Range(-5f, 5f) + _camera.transform.position.x, 5f + _camera.transform.position.y, 0f), Random.Range(5.0f, 6.0f));
-                _enemyMove.AddUnit(enemy);
-                _enemies.Add(enemy);
+                var position = new Vector3(Random.Range(-5f, 5f) + _camera.transform.position.x, 5f + _camera.transform.position.y, 0f);
+                var enemy = _enemyObjectPool.CreateEnemy(position, Random.Range(5.0f, 6.0f));
+                EnemyExecution(enemy, position);
             }
         }
     }

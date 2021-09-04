@@ -9,6 +9,11 @@ namespace Asteroids
     {
         public event Action<int> OnTriggerEnterChange;
 
+        public void Activate(IDealingCreate value, Vector3 position)
+        {
+            value.Visit(this, new InfoCreation(position));
+        }
+
         private void OnBecameInvisible()
         {
             ReturnToPool();

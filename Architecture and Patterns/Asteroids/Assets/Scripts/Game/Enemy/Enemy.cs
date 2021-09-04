@@ -14,6 +14,7 @@ namespace Asteroids
         private bool _isDestroyed = false;
         private IScore _player;
         private List<IAbility> _ability;
+        
         public List<IAbility> Ability
         {
             get => _ability;
@@ -35,6 +36,7 @@ namespace Asteroids
         }
 
         public event Action<int> OnTriggerEnterChange;
+        public event Action<int> OnBecomeInvisibleChange;
 
         public virtual void Move(Vector3 position, float deltaTime)
         {
@@ -69,8 +71,8 @@ namespace Asteroids
 
         public virtual void OnBecameInvisible()
         {
-            if(!_isDestroyed)
-                OnTriggerEnterChange?.Invoke(gameObject.GetInstanceID());
+            //if(!_isDestroyed)
+            OnBecomeInvisibleChange?.Invoke(gameObject.GetInstanceID());
         }
 
 
@@ -104,6 +106,11 @@ namespace Asteroids
                     yield return ability;
                 }
             }
+        }
+
+        public void Activate(IDealingCreate value, Vector3 position)
+        {
+            value.Visit(this, new InfoCreation(position));
         }
 
     }
