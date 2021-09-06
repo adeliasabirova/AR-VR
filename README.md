@@ -1,3 +1,2 @@
 # AR-VR
-A repository for the education
-Lesson 3 unity & patterns
+A repository for the education that consists of homeworks for passed courses.
