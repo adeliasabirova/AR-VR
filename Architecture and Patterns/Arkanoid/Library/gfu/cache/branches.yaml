@@ -13,25 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-08-15T19:54:21.543+03:00
-  initializedAtString: 2021-08-15T19:53:22.135+03:00
+  lastUpdatedAtString: 2021-10-03T18:15:43.250+03:00
+  initializedAtString: 2021-10-03T18:14:54.240+03:00
   localBranches:
-  - name: lesson1
-    tracking: origin/lesson1
-  - name: lesson10
-    tracking: origin/lesson10
-  - name: lesson2
-    tracking: origin/lesson2
-  - name: lesson3
-    tracking: origin/lesson3
-  - name: lesson5
-    tracking: origin/lesson5
-  - name: lesson6
-    tracking: origin/lesson6
-  - name: lesson8
-    tracking: origin/lesson8
-  - name: lesson9
-    tracking: origin/lesson9
   - name: main
     tracking: origin/main
   remoteBranches:
@@ -69,56 +53,8 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
-    - lesson1
-    - lesson10
-    - lesson2
-    - lesson3
-    - lesson5
-    - lesson6
-    - lesson8
-    - lesson9
     - main
     values:
-    - name: lesson1
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson1
-    - name: lesson10
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson10
-    - name: lesson2
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson2
-    - name: lesson3
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson3
-    - name: lesson5
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson5
-    - name: lesson6
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson6
-    - name: lesson8
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson8
-    - name: lesson9
-      remote:
-        name: origin
-        url: https://github.com/AdeliaSabirova/AR-VR.git
-      trackingBranch: lesson9
     - name: main
       remote:
         name: origin
