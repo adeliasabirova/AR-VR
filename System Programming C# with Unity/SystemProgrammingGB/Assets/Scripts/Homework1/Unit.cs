@@ -46,7 +46,7 @@ namespace Homework1
 
 
                 cancellationTokenSource.Cancel();
-                Debug.Log("Result is " + result.ToString());
+                Debug.Log($"Result is {result}");
                 cancellationTokenSource.Dispose();
             }
         }

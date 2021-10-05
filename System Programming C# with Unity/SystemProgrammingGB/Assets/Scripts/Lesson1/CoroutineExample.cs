@@ -5,11 +5,11 @@ namespace Lesson1 {
 
     public class CoroutineExample : MonoBehaviour
     {
-        private SpriteRenderer renderer;
+        private SpriteRenderer _renderer;
 
         private void Start()
         {
-            renderer = GetComponent<SpriteRenderer>();
+            _renderer = GetComponent<SpriteRenderer>();
             //StartCoroutine(PrintOverTime());
             //StartCoroutine(MoveUp(3, Vector3.up));
             //StartCoroutine(MoveAround());
@@ -72,18 +72,18 @@ namespace Lesson1 {
         IEnumerator GenericAnimation(Vector3 targetPosition, Color targetColor, float duration)
         {
             Vector3 startPosition = transform.position;
-            Color startColor = renderer.color;
+            Color startColor = _renderer.color;
             float progress = 0;
 
             while (progress <= 1)
             {
                 transform.position = Vector3.Lerp(startPosition, targetPosition, progress);
-                renderer.color = Color.Lerp(startColor, targetColor, progress);
+                _renderer.color = Color.Lerp(startColor, targetColor, progress);
                 progress += Time.deltaTime / duration;
                 yield return null;
             }
             transform.position = targetPosition;
-            renderer.color = targetColor;
+            _renderer.color = targetColor;
         }
     }
 }

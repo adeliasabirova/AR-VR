@@ -60,6 +60,8 @@
     <Compile Include="Assets\Scripts\Homework1\Unit.cs" />
     <Compile Include="Assets\Scripts\Homework1\UI.cs" />
     <Compile Include="Assets\Scripts\Lesson1\AsyncExample.cs" />
+    <Compile Include="Assets\Scripts\Lesson1\TryPopUp.cs" />
+    <Compile Include="Assets\Scripts\Lesson1\SomePopUp.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
