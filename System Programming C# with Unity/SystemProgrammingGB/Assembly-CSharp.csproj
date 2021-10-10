@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,15 +53,31 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="Assets\Scripts\Homework2\AdvancedJobForTransform.cs" />
     <Compile Include="Assets\Scripts\Lesson1\CoroutineExample.cs" />
+    <Compile Include="Assets\Scripts\Homework2\Solution2.cs" />
+    <Compile Include="Assets\Scripts\Homework2\AdvancedJob.cs" />
+    <Compile Include="Assets\Scripts\Homework2\AdvancedJobParallelFor.cs" />
+    <Compile Include="Assets\Scripts\Homework2\Solution1.cs" />
+    <Compile Include="Assets\Scripts\Homework2\Solution3.cs" />
     <Compile Include="Assets\Scripts\Homework1\Unit.cs" />
     <Compile Include="Assets\Scripts\Lesson1\SomePopUp.cs" />
     <Compile Include="Assets\Scripts\Homework1\UI.cs" />
     <Compile Include="Assets\Scripts\Lesson1\AsyncExample.cs" />
     <Compile Include="Assets\Scripts\Lesson1\TryPopUp.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Data\Data.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Data\CelestailBodyData.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\GalaxyStarter.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Interface\IController.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Interface\IInitialize.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Interface\IExecute.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Interface\ICleanUp.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Controllers\Controllers.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Controllers\GalaxyInitialization.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Controllers\CelestialBodyController.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Main Model\GravitationJob.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Main Model\MovementJov.cs" />
+    <Compile Include="Assets\Galaxy\Scripts\Main Model\RotationJob.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
