@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Scripts/Homework1/Homework1.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
