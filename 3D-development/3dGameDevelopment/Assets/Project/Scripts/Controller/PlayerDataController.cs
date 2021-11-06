@@ -24,7 +24,7 @@ namespace Project
         public void Gui()
         {
             _color = RGBSlider(new Rect(10, 50, 200, 20), _color);
-            _slider = HealthSlider(new Rect(10, 100, 200, 20), _slider, "Damage value");
+            _slider = HealthSlider(new Rect(10, 150, 200, 20), _slider, "Damage value");
         }
 
         Color RGBSlider(Rect screenRect, Color rgb)
@@ -34,6 +34,8 @@ namespace Project
             rgb.g = LabelSlider(screenRect, rgb.g, 1.0f, "Green");
             screenRect.y += 20;
             rgb.b = LabelSlider(screenRect, rgb.b, 1.0f, "Blue");
+            screenRect.y += 20;
+            rgb.a = LabelSlider(screenRect, rgb.a, 1.0f, "Alpha");
             return rgb;
         }
 
