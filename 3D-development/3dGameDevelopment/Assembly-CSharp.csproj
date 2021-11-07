@@ -84,6 +84,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\CameraData.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerInitialization.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
     <Compile Include="Assets\Lesson2\Scripts\Example1.cs" />
@@ -117,10 +118,12 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerDataController.cs" />
+    <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseX.cs" />
     <Compile Include="Assets\Project\Scripts\Data\PlayerBodyData.cs" />
     <Compile Include="Assets\Project\Scripts\Interface\IController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerMoveController.cs" />
+    <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseY.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarAudio.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\Controllers.cs" />
@@ -192,9 +195,15 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
     <Compile Include="Assets\Project\Scripts\Player\Movement.cs" />
-    <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseX.cs" />
-    <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseY.cs" />
-    <Compile Include="Assets\Project\Scripts\Data\CameraData.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\LightingData.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\LightingController.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\LightingInitialization.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\FirefliesController.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\FirefliesInitialization.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\FirefliesData.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\CloudsInitialization.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\CloudsController.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\CloudsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

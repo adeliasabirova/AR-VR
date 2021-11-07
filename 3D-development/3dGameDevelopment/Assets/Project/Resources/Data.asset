@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPath: PlayerBodyData
   _cameraPath: CameraData
+  _lightingPath: LightingData
+  _firefliesPath: FirefliesData
+  _cloudsPath: CloudsData
