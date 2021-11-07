@@ -192,6 +192,9 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
     <Compile Include="Assets\Project\Scripts\Player\Movement.cs" />
+    <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseX.cs" />
+    <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseY.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\CameraData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

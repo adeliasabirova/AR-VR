@@ -14,7 +14,7 @@ namespace Project
         private Movement _movement;
 
 
-        public PlayerMoveController(Transform playerTransform, PlayerBodyData playerData, (IUserInputProxy inputHorizontal, IUserInputProxy inputVertical) input, Camera camera)
+        public PlayerMoveController(Transform playerTransform, PlayerBodyData playerData, (IUserInputProxy inputHorizontal, IUserInputProxy inputVertical, IUserInputProxy inputMouseX) input, Camera camera)
         {
             _playerTransform = playerTransform;
             _playerData = playerData;

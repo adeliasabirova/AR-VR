@@ -12,7 +12,7 @@ namespace Project
             controllers.Add(inputInitialization);
             controllers.Add(playerInitialization);
             controllers.Add(new InputController(inputInitialization.GetInput()));
-            controllers.Add(new CameraController(playerInitialization.PlayerTransform, camera.transform));
+            controllers.Add(new CameraController(data.CameraData, playerInitialization.PlayerTransform, camera.transform, inputInitialization.GetInput()));
             controllers.Add(new PlayerMoveController(playerInitialization.PlayerTransform, data.PlayerBody, inputInitialization.GetInput(), camera));
             controllers.Add(healthController);
             controllers.Add(new PlayerDataController(playerInitialization.PlayerTransform, healthController));
