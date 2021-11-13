@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1424134f3d9d4864799de8523ba5851c, type: 3}
   m_Name: PlayerBodyData
   m_EditorClassIdentifier: 
-  _playerBodyPrefab: {fileID: 100000, guid: ef5fb832efad48d4ea830dc9c54e0cec, type: 3}
+  _playerBodyPrefab: {fileID: 400000, guid: ef5fb832efad48d4ea830dc9c54e0cec, type: 3}
   _power: 5
   _useTorque: 1
   _angularVelocity: 25

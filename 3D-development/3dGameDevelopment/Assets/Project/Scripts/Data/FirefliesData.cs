@@ -15,9 +15,9 @@ namespace Project
         [SerializeField] private ParticleSystem.MinMaxCurve _curve;
         [SerializeField] private float _strength = 0.5f;
         [SerializeField] private float _frequency = 0.8f;
-        [SerializeField] private ParticleSystem _fireflies;
+        [SerializeField] private Transform _fireflies;
 
-        public ParticleSystem Fireflies => _fireflies;
+        public Transform Fireflies => _fireflies;
         public float StartSize => _startSize;
         public float StartSpeed => _startSpeed;
         public float RateOverTime => _rateOverTime;

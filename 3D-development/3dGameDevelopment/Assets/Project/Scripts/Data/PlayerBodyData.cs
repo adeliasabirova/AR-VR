@@ -7,7 +7,7 @@ namespace Project
     [CreateAssetMenu(fileName = "PlayerBodyData", menuName = "Data/Unit/PlayerBodyData")]
     public sealed class PlayerBodyData : ScriptableObject
     {
-        [SerializeField] private GameObject _playerBodyPrefab;
+        [SerializeField] private Transform _playerBodyPrefab;
         [SerializeField] private float _power;
         [SerializeField] private bool _useTorque;
         [SerializeField] private float _angularVelocity;
@@ -18,7 +18,7 @@ namespace Project
         public float AngularVelocity => _angularVelocity;
         public float HealthPoints => _healthPoints;
 
-        public GameObject GetPrefab()
+        public Transform GetPrefab()
         {
             return _playerBodyPrefab;
         }

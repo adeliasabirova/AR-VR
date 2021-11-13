@@ -16,7 +16,7 @@ MonoBehaviour:
   _startTime: 0.4
   _noon: {x: 90, y: 0, z: 0}
   _lightingOffset: 4
-  _sun: {fileID: 2334139738152163727, guid: 4451118e3736d5144bbecd1d121d2447, type: 3}
+  _sun: {fileID: 2334139738152163726, guid: 4451118e3736d5144bbecd1d121d2447, type: 3}
   _sunColor:
     serializedVersion: 2
     key0: {r: 0.85098046, g: 0.48627454, b: 0.06666667, a: 1}
@@ -70,7 +70,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  _moon: {fileID: 809780806858021015, guid: 8df930babeba3a247a23cb0aec8a8b31, type: 3}
+  _moon: {fileID: 809780806858021014, guid: 8df930babeba3a247a23cb0aec8a8b31, type: 3}
   _moonColor:
     serializedVersion: 2
     key0: {r: 0.08321467, g: 0.13485374, b: 0.3207547, a: 1}
@@ -155,18 +155,18 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.04005139
-      value: 0.10024362
+      time: 0.039990354
+      value: 0.090924315
       inSlope: 0.0016991196
-      outSlope: 0.0012803661
+      outSlope: 0.0012764491
       tangentMode: 65
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.05994108
-      value: 0.10026909
-      inSlope: 0.0012803661
+      value: 0.09094978
+      inSlope: 0.0012764491
       outSlope: 0
       tangentMode: 5
       weightedMode: 0

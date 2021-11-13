@@ -6,10 +6,10 @@ namespace Project
         private readonly FirefliesData _firefliesData;
         private ParticleSystem _fireflies;
 
-        public FirefliesController(FirefliesData firefliesData, ParticleSystem fireflies)
+        public FirefliesController(FirefliesData firefliesData, Transform fireflies)
         {
             _firefliesData = firefliesData;
-            _fireflies = fireflies;
+            _fireflies = fireflies.GetComponent<ParticleSystem>();
         }
         public void Initialize()
         {

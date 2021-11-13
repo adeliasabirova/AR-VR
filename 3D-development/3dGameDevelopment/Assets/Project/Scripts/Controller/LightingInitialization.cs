@@ -11,8 +11,8 @@ namespace Project
         public LightingInitialization(LightingData lightingData)
         {
             _lightingData = lightingData;
-            _sun = Object.Instantiate(_lightingData.Sun);
-            _moon = Object.Instantiate(_lightingData.Moon);
+            _sun = Object.Instantiate(_lightingData.Sun).GetComponent<Light>();
+            _moon = Object.Instantiate(_lightingData.Moon).GetComponent<Light>();
         }
         public void Initialize()
         {

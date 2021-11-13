@@ -84,4 +84,4 @@ MonoBehaviour:
     m_ConstantMax: 0
   _strength: 0.5
   _frequency: 0.8
-  _fireflies: {fileID: 7046754409401009771, guid: 51963e7d4951d584489471be332eb63b, type: 3}
+  _fireflies: {fileID: 7046754409401009764, guid: 51963e7d4951d584489471be332eb63b, type: 3}

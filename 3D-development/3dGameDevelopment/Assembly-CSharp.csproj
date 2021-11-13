@@ -66,6 +66,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Explosive.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\InputController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\DynamicShadowSettings.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\CloudsController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\LerpControlledBob.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\HealthController.cs" />
@@ -83,9 +84,9 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Cameras\Scripts\FreeLookCam.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneController.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\FirefliesController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
     <Compile Include="Assets\Project\Scripts\Data\CameraData.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\PlayerInitialization.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
     <Compile Include="Assets\Lesson2\Scripts\Example1.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\TimedObjectActivator.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\SmokeParticles.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\CloudsData.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\InputInitialization.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Cameras\Scripts\AutoCam.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarAIControl.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Cameras\Scripts\PivotBasedCameraRig.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\LightingData.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerDataController.cs" />
     <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseX.cs" />
@@ -150,15 +153,18 @@
     <Compile Include="Assets\Project\Scripts\Interface\ILateExecute.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
     <Compile Include="Assets\Project\Scripts\GameStarter.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\ObjectInitialization.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
     <Compile Include="Assets\Project\Scenes\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\LightingInitialization.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\DragRigidbody.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneAudio.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\FireLight.cs" />
     <Compile Include="Assets\Project\Scenes\Mountain Terrain\Misc\CameraDefault.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\LightingController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
     <Compile Include="Assets\Project\Scripts\Interface\IExecute.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
@@ -186,6 +192,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\EventSystemChecker.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\ActivateTrigger.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\FirefliesData.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
@@ -195,15 +202,6 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
     <Compile Include="Assets\Project\Scripts\Player\Movement.cs" />
-    <Compile Include="Assets\Project\Scripts\Data\LightingData.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\LightingController.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\LightingInitialization.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\FirefliesController.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\FirefliesInitialization.cs" />
-    <Compile Include="Assets\Project\Scripts\Data\FirefliesData.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\CloudsInitialization.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\CloudsController.cs" />
-    <Compile Include="Assets\Project\Scripts\Data\CloudsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
