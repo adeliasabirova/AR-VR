@@ -2,12 +2,12 @@
 
 namespace Project
 {
-    internal sealed class Movement: IMove
+    internal sealed class MovementRigidBody: IMoveRigidBody
     {
         private readonly PlayerBodyData _playerData;
         private Rigidbody _playerRigidbody;
 
-        public Movement(PlayerBodyData playerData, Rigidbody playerRigidbody)
+        public MovementRigidBody(PlayerBodyData playerData, Rigidbody playerRigidbody)
         {
             _playerData = playerData;
             _playerRigidbody = playerRigidbody;
@@ -25,5 +25,6 @@ namespace Project
                 _playerRigidbody.AddForce(direction * _playerData.Power);
             }
         }
+
     }
 }

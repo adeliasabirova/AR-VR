@@ -17,6 +17,13 @@ namespace Project
             _objectTransform.position = position;
         }
 
+        public ObjectInitialization(Transform objectTransform, Vector3 position, float scale)
+        {
+            _objectTransform = Object.Instantiate(objectTransform);
+            _objectTransform.position = position;
+            _objectTransform.localScale *= scale;
+        }
+
         public void Initialize()
         {
 

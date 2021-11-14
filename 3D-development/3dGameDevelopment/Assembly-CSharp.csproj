@@ -110,6 +110,7 @@
     <Compile Include="Assets\Project\Scripts\Interface\ICleanUp.cs" />
     <Compile Include="Assets\Project\Scripts\UserInput\PCInputVertical.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\CurveControlledBob.cs" />
+    <Compile Include="Assets\Project\Scripts\Player\MovementTranslation.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ParticleSystemMultiplier.cs" />
     <Compile Include="Assets\Project\Scenes\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
@@ -122,6 +123,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerDataController.cs" />
     <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseX.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IMoveRigidBody.cs" />
     <Compile Include="Assets\Project\Scripts\Data\PlayerBodyData.cs" />
     <Compile Include="Assets\Project\Scripts\Interface\IController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
@@ -145,7 +147,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\SmoothFollow.cs" />
     <Compile Include="Assets\Lesson2\Scripts\GuiLayout.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneUserControl2Axis.cs" />
-    <Compile Include="Assets\Project\Scripts\Interface\IMove.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IMoveTranslation.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\RollerBall\Scripts\Ball.cs" />
@@ -201,7 +203,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-    <Compile Include="Assets\Project\Scripts\Player\Movement.cs" />
+    <Compile Include="Assets\Project\Scripts\Player\MovementRigidBody.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

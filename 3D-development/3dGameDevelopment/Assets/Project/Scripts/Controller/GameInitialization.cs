@@ -7,7 +7,7 @@ namespace Project
         {
             Camera camera = Camera.main;
             var inputInitialization = new InputInitialization();
-            var playerInitialization = new ObjectInitialization(data.PlayerBody.GetPrefab(), startPosition);
+            var playerInitialization = new ObjectInitialization(data.PlayerBody.GetPrefab(), startPosition, data.PlayerBody.Scale);
             var healthController = new HealthController(data.PlayerBody);
             var lightingInitialization = new LightingInitialization(data.LightingData);
             var firefliesInitialization = new ObjectInitialization(data.FirefliesData.Fireflies);

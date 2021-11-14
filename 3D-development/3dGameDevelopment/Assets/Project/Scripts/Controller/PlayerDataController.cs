@@ -12,7 +12,7 @@ namespace Project
 
         public PlayerDataController(Transform transform, HealthController healthController)
         {
-            _playerMaterial = transform.GetComponent<Renderer>().material;
+            _playerMaterial = transform.GetChild(0).GetComponent<Renderer>().material;
             _healthPoints = healthController;
         }
 
