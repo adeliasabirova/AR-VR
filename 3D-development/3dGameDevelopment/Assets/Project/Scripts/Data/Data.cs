@@ -13,12 +13,14 @@ namespace Project
         [SerializeField] private string _lightingPath;
         [SerializeField] private string _firefliesPath;
         [SerializeField] private string _cloudsPath;
+        [SerializeField] private string _enemyPath;
 
         private PlayerBodyData _playerBody;
         private CameraData _cameraData;
         private LightingData _lightingData;
         private FirefliesData _firefliesData;
         private CloudsData _cloudsData;
+        private EnemyData _enemyData;
 
         public PlayerBodyData PlayerBody
         {
@@ -77,6 +79,18 @@ namespace Project
                     _cloudsData = Load<CloudsData>(_cloudsPath);
                 }
                 return _cloudsData;
+            }
+        }
+
+        public EnemyData EnemyData
+        {
+            get
+            {
+                if (_enemyData == null)
+                {
+                    _enemyData = Load<EnemyData>(_enemyPath);
+                }
+                return _enemyData;
             }
         }
 

@@ -59,6 +59,8 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Project\Scripts\Interface\IJumpAir.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IJumpGround.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\WheelEffects.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarSelfRighting.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\GameInitialization.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
     <Compile Include="Assets\Project\Scripts\Data\CameraData.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IUserButtonInputProxy.cs" />
     <Compile Include="Assets\Lesson2\Scripts\Example1.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\TimedObjectActivator.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\BrakeLight.cs" />
@@ -123,11 +126,12 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\AutoMoveAndRotate.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerDataController.cs" />
     <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseX.cs" />
-    <Compile Include="Assets\Project\Scripts\Interface\IMoveRigidBody.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IMove.cs" />
     <Compile Include="Assets\Project\Scripts\Data\PlayerBodyData.cs" />
     <Compile Include="Assets\Project\Scripts\Interface\IController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\PlayerMoveController.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\PlayerInitialization.cs" />
     <Compile Include="Assets\Project\Scripts\UserInput\PCInputMouseY.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarAudio.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\2D\Scripts\PlatformerCharacter2D.cs" />
@@ -143,6 +147,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IAnimatorMove.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\SmoothFollow.cs" />
     <Compile Include="Assets\Lesson2\Scripts\GuiLayout.cs" />
@@ -157,6 +162,7 @@
     <Compile Include="Assets\Project\Scripts\GameStarter.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\ObjectInitialization.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+    <Compile Include="Assets\Project\Scripts\AnimatorManager.cs" />
     <Compile Include="Assets\Project\Scenes\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\2D\Scripts\Platformer2DUserControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\WaypointProgressTracker.cs" />
@@ -172,6 +178,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
     <Compile Include="Assets\Project\Scripts\Interface\IGUI.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\FollowTarget.cs" />
+    <Compile Include="Assets\Project\Scripts\Player\JumpMovement.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneAiControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ExtinguishableParticleSystem.cs" />
     <Compile Include="Assets\Lesson2\Scripts\IMGui.cs" />
@@ -186,6 +193,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\AlphaButtonClickMask.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\FOVKick.cs" />
     <Compile Include="Assets\Project\Scripts\Controller\CameraController.cs" />
+    <Compile Include="Assets\Project\Scripts\UserInput\PCInputJump.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\2D\Scripts\Restarter.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\2D\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\WaterHoseParticles.cs" />
@@ -203,7 +211,9 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-    <Compile Include="Assets\Project\Scripts\Player\MovementRigidBody.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IAnimatorIK.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\EnemyData.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\AnimatorIKController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
