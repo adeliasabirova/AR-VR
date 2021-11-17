@@ -97,9 +97,6 @@ namespace Project
         {
             float turnVelocity = Mathf.Lerp(_playerData.StandingTurningSpeed, _playerData.MovingTurningSpeed, forward);
             _playerTransform.Rotate(0.0f, turn * turnVelocity * deltaTime, 0.0f);
-            Debug.Log(_playerTransform.rotation.eulerAngles);
-            Debug.Log(turn);
-            Debug.Log(forward);
         }
 
         private void UpdateAnimator(float forward, float turn, float deltaTime)
@@ -130,9 +127,6 @@ namespace Project
 
         public void Execute(float deltaTime)
         {
-            if (_vertical != 0)
-                Debug.Log("forward");
-
             _movement.Move(_horizontal, _vertical, _camera.transform.right, _camera.transform.forward);
             
             var translation = _playerTransform.InverseTransformDirection(_movement.Speed);
