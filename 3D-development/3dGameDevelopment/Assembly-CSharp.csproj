@@ -98,6 +98,7 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\JetParticleEffect.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Project\Scripts\Data\Data.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IAnimatorIK.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\CameraRefocus.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
@@ -150,7 +151,9 @@
     <Compile Include="Assets\Project\Scripts\Interface\IAnimatorMove.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\SmoothFollow.cs" />
+    <Compile Include="Assets\Project\Scripts\Data\EnemyData.cs" />
     <Compile Include="Assets\Lesson2\Scripts\GuiLayout.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\AnimatorIKController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\AeroplaneUserControl2Axis.cs" />
     <Compile Include="Assets\Project\Scripts\Interface\IMoveTranslation.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\WaypointCircuit.cs" />
@@ -211,9 +214,6 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
-    <Compile Include="Assets\Project\Scripts\Interface\IAnimatorIK.cs" />
-    <Compile Include="Assets\Project\Scripts\Data\EnemyData.cs" />
-    <Compile Include="Assets\Project\Scripts\Controller\AnimatorIKController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
