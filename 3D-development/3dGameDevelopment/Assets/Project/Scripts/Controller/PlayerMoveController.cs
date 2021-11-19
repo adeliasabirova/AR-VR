@@ -2,18 +2,10 @@
 
 namespace Project
 {
-    internal static class GetMovementByPlayer
-    {
-        public static PlayerMoveController Controller { get; set; }
-        public static void AnimatorMove(float deltaTime)
-        {
-            Controller.AnimatorMove(deltaTime);
-        }
-
-    }
-    internal sealed class PlayerMoveController: IInitialize, IExecute, ICleanUp, IAnimatorMove
+    internal sealed class PlayerMoveController: IInitialize, IExecute, ICleanUp
     {
         private Transform _playerTransform;
+        private IPlayer _player;
         private readonly PlayerBodyData _playerData;
         private float _horizontal;
         private float _vertical;
@@ -31,7 +23,7 @@ namespace Project
         private Rigidbody _body;
 
 
-        public PlayerMoveController(Transform playerTransform, PlayerBodyData playerData, (IUserInputProxy inputHorizontal, IUserInputProxy inputVertical, IUserInputProxy inputMouseX, IUserButtonInputProxy inputJump) input, Camera camera)
+        public PlayerMoveController(IPlayer player, Transform playerTransform, PlayerBodyData playerData, (IUserInputProxy inputHorizontal, IUserInputProxy inputVertical, IUserInputProxy inputMouseX, IUserButtonInputProxy inputJump) input, Camera camera)
         {
             _playerTransform = playerTransform;
             _playerData = playerData;
@@ -39,7 +31,7 @@ namespace Project
             _verticalInputProxy = input.inputVertical;
             _jumpInputProxy = input.inputJump;
             _camera = camera;
-            
+            _player = player;
         }
 
         public void Initialize()
@@ -47,6 +39,7 @@ namespace Project
             _horizontalInputProxy.AxisOnChange += HorizontalOnAxisChange;
             _verticalInputProxy.AxisOnChange += VerticalOnAxisChange;
             _jumpInputProxy.MouseButtonOnChangeDown += MouseButtonOnChangeDown;
+            _player.OnAnimatorMoveChange += AnimatorMoveChange;
 
             _distanceToGroundCheck = _playerData.DistanceToGroundCheck;
 
@@ -57,6 +50,15 @@ namespace Project
             _jumpMovement = new JumpMovement(_body, _distanceToGroundCheck);
         }
 
+        private void AnimatorMoveChange(float deltaTime)
+        {
+            if (_onGround && deltaTime > 0)
+            {
+                Vector3 velocity = _animator.deltaPosition * _playerData.MovingSpeedMultiplier / deltaTime;
+                velocity.y = _body.velocity.y;
+                _body.velocity = velocity;
+            }
+        }
 
         private void VerticalOnAxisChange(float obj)
         {
@@ -151,21 +153,12 @@ namespace Project
             
         }
 
-        public void AnimatorMove(float deltaTime)
-        {
-            if(_onGround && deltaTime > 0)
-            {
-                Vector3 velocity = _animator.deltaPosition * _playerData.MovingSpeedMultiplier / deltaTime;
-                velocity.y = _body.velocity.y;
-                _body.velocity = velocity;
-            }
-        }
-
         public void CleanUp()
         {
             _horizontalInputProxy.AxisOnChange -= HorizontalOnAxisChange;
             _verticalInputProxy.AxisOnChange -= VerticalOnAxisChange;
             _jumpInputProxy.MouseButtonOnChangeDown -= MouseButtonOnChangeDown;
+            _player.OnAnimatorMoveChange -= AnimatorMoveChange;
         }
     }
 }

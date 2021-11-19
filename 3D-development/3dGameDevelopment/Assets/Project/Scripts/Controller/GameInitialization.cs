@@ -13,8 +13,8 @@ namespace Project
             var lightingInitialization = new LightingInitialization(data.LightingData);
             var firefliesInitialization = new ObjectInitialization(data.FirefliesData.Fireflies);
             var cloudsInitialization = new ObjectInitialization(data.CLoudsData.Clouds);
-            var enemyInitalization = new ObjectInitialization(data.EnemyData.Enemy, data.EnemyData.Position, data.EnemyData.Scale);
-            var playerMoveController = new PlayerMoveController(playerInitialization.ObjectTransform, data.PlayerBody, inputInitialization.GetInput(), camera);
+            var enemyInitalization = new EnemyInitalization(data.EnemyData);
+            var playerMoveController = new PlayerMoveController(playerInitialization.GetPlayer(), playerInitialization.ObjectTransform, data.PlayerBody, inputInitialization.GetInput(), camera);
             controllers.Add(inputInitialization);
             controllers.Add(playerInitialization);
             controllers.Add(new InputController(inputInitialization.GetInput()));
@@ -29,7 +29,8 @@ namespace Project
             controllers.Add(cloudsInitialization);
             controllers.Add(new CloudsController(data.CLoudsData, cloudsInitialization.ObjectTransform));
             controllers.Add(enemyInitalization);
-            GetMovementByPlayer.Controller = playerMoveController;
+            controllers.Add(new AnimatorIKController(playerInitialization.ObjectTransform, playerInitialization.GetPlayer(), enemyInitalization.GetEnemies()));
+            //controllers.Add(new RagdollEnemyController(enemyInitalization.GetEnemies(), playerInitialization.ObjectTransform));
 
         }
     }

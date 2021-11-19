@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: EnemyData
   m_EditorClassIdentifier: 
   _enemy: {fileID: 474340, guid: 708d375e6c60fe54f9e87475263a9d80, type: 3}
-  _position: {x: -340, y: 0.00001, z: 950}
-  _scale: 1
+  _positions:
+  - {x: -320, y: 0.00001, z: 950}
+  _scale: 1.5

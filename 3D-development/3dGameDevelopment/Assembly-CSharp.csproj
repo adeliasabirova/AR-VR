@@ -98,7 +98,6 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Aircraft\Scripts\JetParticleEffect.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
     <Compile Include="Assets\Project\Scripts\Data\Data.cs" />
-    <Compile Include="Assets\Project\Scripts\Interface\IAnimatorIK.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\CameraRefocus.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
@@ -148,7 +147,6 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\Suspension.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Cameras\Scripts\AbstractTargetFollower.cs" />
-    <Compile Include="Assets\Project\Scripts\Interface\IAnimatorMove.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Vehicles\Car\Scripts\CarController.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\Utility\SmoothFollow.cs" />
     <Compile Include="Assets\Project\Scripts\Data\EnemyData.cs" />
@@ -214,6 +212,10 @@
     <Compile Include="Assets\Project\Scenes\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
     <Compile Include="Assets\Project\Scenes\Standard Assets\ParticleSystems\Scripts\Hose.cs" />
+    <Compile Include="Assets\Project\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Project\Scripts\Interface\IPlayer.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\EnemyInitalization.cs" />
+    <Compile Include="Assets\Project\Scripts\Controller\RagdollEnemyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Project\Scenes\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />

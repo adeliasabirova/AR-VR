@@ -24,5 +24,10 @@ namespace Project
 
         public Transform ObjectTransform => _objectTransform;
         public Transform BodyTransform => _bodyTransform;
+
+        public Player GetPlayer()
+        {
+            return _objectTransform.GetComponent<Player>();
+        }
     }
 }

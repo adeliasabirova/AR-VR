@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Project
 {
@@ -6,11 +7,11 @@ namespace Project
     public sealed class EnemyData : ScriptableObject
     {
         [SerializeField] private Transform _enemy;
-        [SerializeField] private Vector3 _position;
+        [SerializeField] private List<Vector3> _positions;
         [SerializeField] private float _scale;
 
         public Transform Enemy => _enemy;
-        public Vector3 Position => _position;
+        public List<Vector3> Positions => _positions;
         public float Scale => _scale;
     }
 }
