@@ -94,6 +94,7 @@ namespace Project
             }
         }
 
+
         private T Load<T>(string resourcesPath) where T : Object =>
            Resources.Load<T>(Path.ChangeExtension(resourcesPath, null));
     }

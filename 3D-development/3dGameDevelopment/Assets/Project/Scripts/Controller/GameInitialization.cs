@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
+
 namespace Project
 {
-
     internal sealed class GameInitialization
     {
         public GameInitialization(Controllers controllers, Data data, Vector3 startPosition)
@@ -15,6 +15,7 @@ namespace Project
             var cloudsInitialization = new ObjectInitialization(data.CLoudsData.Clouds);
             var enemyInitalization = new EnemyInitalization(data.EnemyData);
             var playerMoveController = new PlayerMoveController(playerInitialization.GetPlayer(), playerInitialization.ObjectTransform, data.PlayerBody, inputInitialization.GetInput(), camera);
+
             controllers.Add(inputInitialization);
             controllers.Add(playerInitialization);
             controllers.Add(new InputController(inputInitialization.GetInput()));
