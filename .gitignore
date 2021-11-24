@@ -341,3 +341,12 @@ healthchecksdb
 
 # Unity libraries
 /Library/
+
+# Unity hooks
+/hooks
+
+#Unity lfs objects
+/lfs/objects
+
+#Project Library
+/System\ Programming\ C#\ with\ Unity/SystemProgrammingGB/Library/
