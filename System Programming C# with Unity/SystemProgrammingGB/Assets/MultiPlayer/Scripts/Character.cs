@@ -38,5 +38,6 @@ public abstract class Character : NetworkBehaviour
         _serverRotation = rotation;
     }
 
+
     public abstract void Movement();
 }

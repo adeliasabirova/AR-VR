@@ -93,6 +93,8 @@ public class PlayerCharacter : Character, IDamage
     public void TakeDamage(int damage)
     {
         _currentHealth -= damage;
+        
+        Debug.Log($"{netId}: {_currentHealth}");
         if (_currentHealth <= 0)
         {
             _currentHealth = 0;
