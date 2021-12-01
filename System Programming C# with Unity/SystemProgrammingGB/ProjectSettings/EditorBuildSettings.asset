@@ -5,10 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/MultiPlayer/Scene/OfflineScene.unity
     guid: e838d77e0b49271438903abeaa82accb
-  - enabled: 1
+  - enabled: 0
     path: Assets/MultiPlayer/Scene/OnlineScene.unity
     guid: abbef3fe0f89c8c42acc48ddf57fe6bb
+  - enabled: 1
+    path: Assets/SpaceShips/Scenes/StartScene.unity
+    guid: 24c31fd966824f540b9f9ed06d1aa995
+  - enabled: 1
+    path: Assets/SpaceShips/Scenes/MainScene.unity
+    guid: f3820545b22b2d5468673f2ac2f0d4c0
   m_configObjects: {}
