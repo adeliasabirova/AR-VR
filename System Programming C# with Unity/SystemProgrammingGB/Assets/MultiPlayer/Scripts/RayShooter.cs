@@ -1,11 +1,9 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class RayShooter : FireAction
-{
-    [SerializeField] private Transform _bulletStartPosition;
-    [SerializeField] private float _bulletForce;
-    [SerializeField] private float _bulletTorque;
+{    
     public static string BulletCount;
 
     protected override void Start()
@@ -45,6 +43,7 @@ public class RayShooter : FireAction
         }
     }
 
+
     private IEnumerator Shoot()
     {
         if (reloading)
@@ -60,10 +59,9 @@ public class RayShooter : FireAction
             shoot.SetActive(true);
             shoot.transform.position = _bulletStartPosition.position;
             shoot.transform.rotation = transform.rotation;
-            var shootRigidBody = shoot.GetComponent<Rigidbody>();
-            shootRigidBody.AddForce(transform.forward * _bulletForce);
-            shootRigidBody.AddTorque(Random.insideUnitSphere * _bulletTorque);
-
+            var rb = shoot.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * _bulletForce);
+            rb.AddTorque(Random.insideUnitSphere * _bulletTorque);
             yield return new WaitForSeconds(2.0f);
             shoot.SetActive(false);
         }

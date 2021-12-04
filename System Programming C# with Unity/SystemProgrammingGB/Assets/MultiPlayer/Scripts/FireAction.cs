@@ -10,6 +10,10 @@ public abstract class FireAction : NetworkBehaviour
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private int _startAmmunition = 20;
 
+    [SerializeField] protected float _bulletForce;
+    [SerializeField] protected float _bulletTorque;
+    [SerializeField] protected Transform _bulletStartPosition;
+
     protected string countBullet = string.Empty;
     protected Queue<GameObject> bullets = new Queue<GameObject>();
     protected Queue<GameObject> ammunition = new Queue<GameObject>();
@@ -100,4 +104,6 @@ public abstract class FireAction : NetworkBehaviour
         RayShooter.BulletCount = bullets.Count.ToString();
         yield return null;
     }
+
 }
+

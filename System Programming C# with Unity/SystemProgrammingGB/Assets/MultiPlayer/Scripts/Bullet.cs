@@ -10,7 +10,7 @@ public class Bullet : MonoBehaviour
         var damage = other.TryGetComponent<IDamage>(out var component);
         if (damage)
         {
-            component.TakeDamage(10);
+            component.RpcTakeDamage(10);
         }
         gameObject.SetActive(false);
     }

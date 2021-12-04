@@ -6,13 +6,13 @@ using UnityEngine.Networking;
 public class PlayerCharacter : Character, IDamage
 {
     [Range(0, 100)] [SerializeField] private int _health = 100;
-    private int _currentHealth;
 
     [Range(0.5f, 10.0f)] [SerializeField] private float _movingSpeed = 8.0f;
     [SerializeField] private float _acceleration = 3.0f;
     private const float _gravity = -9.8f;
     private CharacterController _characterController;
     private MouseLook _mouseLook;
+    private Camera _camera;
 
     private Vector3 _currentVelocity;
 
@@ -28,8 +28,7 @@ public class PlayerCharacter : Character, IDamage
         _characterController ??= gameObject.AddComponent<CharacterController>();
         _mouseLook = GetComponent<MouseLook>();
         _mouseLook ??= gameObject.AddComponent<MouseLook>();
-
-        _currentHealth = _health;
+        _camera = GetComponentInChildren<Camera>();
     }
 
     public override void Movement()
@@ -58,12 +57,13 @@ public class PlayerCharacter : Character, IDamage
             _mouseLook.Rotation();
 
             CmdUpdatePosition(transform.position);
-            CmdUpdateRotation(transform.rotation);
+            CmdUpdateRotation(transform.rotation, _camera.transform.rotation);
         }
         else
         {
             transform.position = Vector3.SmoothDamp(transform.position, _serverPosition, ref _currentVelocity, _movingSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Lerp(transform.rotation, _serverRotation, 0.5f);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, _serverRotationY, 1000 * Time.deltaTime);
+            _camera.transform.rotation = Quaternion.RotateTowards(_camera.transform.rotation, _serverRotationX, 1000 * Time.deltaTime);
         }
 
     }
@@ -74,33 +74,35 @@ public class PlayerCharacter : Character, IDamage
     }
     private void OnGUI()
     {
-        if (Camera.main == null)
+        if (hasAuthority)
         {
-            return;
-        }
+            if (_camera == null)
+            {
+                return;
+            }
 
-        var info = $"Health: {_currentHealth}\nClip: {RayShooter.BulletCount}";
-        var size = 12;
-        var bulletCountSize = 50;
-        var posX = Camera.main.pixelWidth / 2 - size / 4;
-        var posY = Camera.main.pixelHeight / 2 - size / 2;
-        var posXBul = Camera.main.pixelWidth - bulletCountSize * 2;
-        var posYBul = Camera.main.pixelHeight - bulletCountSize;
-        GUI.Label(new Rect(posX, posY, size, size), "+");
-        GUI.Label(new Rect(posXBul, posYBul, bulletCountSize * 2, bulletCountSize * 2), info);
+            var info = $"Health: {_health}\nClip: {RayShooter.BulletCount}";
+            var size = 12;
+            var bulletCountSize = 50;
+            var posX = _camera.pixelWidth / 2 - size / 4;
+            var posY = _camera.pixelHeight / 2 - size / 2;
+            var posXBul = _camera.pixelWidth - bulletCountSize * 2;
+            var posYBul = _camera.pixelHeight - bulletCountSize;
+            GUI.Label(new Rect(posX, posY, size, size), "+");
+            GUI.Label(new Rect(posXBul, posYBul, bulletCountSize * 2, bulletCountSize * 2), info);
+        }
     }
 
-    public void TakeDamage(int damage)
+    [ClientRpc]
+    public void RpcTakeDamage(int damage)
     {
-        _currentHealth -= damage;
-        
-        Debug.Log($"{netId}: {_currentHealth}");
-        if (_currentHealth <= 0)
-        {
-            _currentHealth = 0;
-            if(!isServer)
-                NetworkManager.singleton.StopClient();
+        _health -= damage;
+
+        if (_health <= 0){
+            _health = 0;
+            NetworkManager.singleton.StopClient();
         }
+        
     }
 }
 

@@ -1,4 +1,4 @@
 ﻿public interface IDamage
 {
-    void TakeDamage(int damage);
+    void RpcTakeDamage(int damage);
 }
