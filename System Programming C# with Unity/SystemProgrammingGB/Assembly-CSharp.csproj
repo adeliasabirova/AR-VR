@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,17 +53,18 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Game Chat\Scripts\TextField.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Lesson1\CoroutineExample.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJob.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJobParallelFor.cs" />
-    <Compile Include="Assets\MultiPlayer\Scripts\IDamage.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution1.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\ShipManager.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\Singleton.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\PlanetOrbit.cs" />
-    <Compile Include="Assets\MultiPlayer\Scripts\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\Homework1\Unit.cs" />
     <Compile Include="Assets\Scripts\Homework1\UI.cs" />
     <Compile Include="Assets\Scripts\Lesson1\AsyncExample.cs" />
@@ -80,15 +81,14 @@
     <Compile Include="Assets\Galaxy\Scripts\Interface\IExecute.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJobForTransform.cs" />
     <Compile Include="Assets\Game Chat\Scripts\ServerClient.cs" />
-    <Compile Include="Assets\MultiPlayer\Scripts\Character.cs" />
+    <Compile Include="Assets\SpaceShips\Scripts\Ship.cs" />
     <Compile Include="Assets\Game Chat\Scripts\Server.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\SpaceShipSettings.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Main Model\RotationJob.cs" />
     <Compile Include="Assets\Game Chat\Scripts\ConstantValues.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution2.cs" />
-    <Compile Include="Assets\MultiPlayer\Scripts\FireAction.cs" />
     <Compile Include="Assets\Game Chat\Scripts\UIController.cs" />
-    <Compile Include="Assets\MultiPlayer\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Shaders\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Galaxy\Scripts\GalaxyStarter.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution3.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IController.cs" />
@@ -96,14 +96,12 @@
     <Compile Include="Assets\Game Chat\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\Lesson1\SomePopUp.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\CameraOrbit.cs" />
-    <Compile Include="Assets\MultiPlayer\Scripts\RayShooter.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Controllers\GalaxyInitialization.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\NetworkMovableObject.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Controllers\Controllers.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\PlayerLabel.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Data\Data.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IInitialize.cs" />
-    <Compile Include="Assets\SpaceShips\Scripts\Ship.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\IShip.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +126,7 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Shaders\Textures\GeometryShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
