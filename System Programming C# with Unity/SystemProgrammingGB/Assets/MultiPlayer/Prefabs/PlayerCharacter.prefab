@@ -215,12 +215,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletPrefab: {fileID: 6456794345248530999, guid: 0170ffa4ad894384a9091e1e52e6d577, type: 3}
   _startAmmunition: 20
-  _bulletForce: 200
+  _bulletForce: 500
   _bulletTorque: 10
   _bulletStartPosition: {fileID: 641019943960672030}
-  _bulletStartPosition: {fileID: 641019943960672030}
-  _bulletForce: 200
-  _bulletTorque: 10
+  _damage: 10
 --- !u!136 &7034529956385700825
 CapsuleCollider:
   m_ObjectHideFlags: 0

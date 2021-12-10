@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(MouseLook))]
-public class PlayerCharacter : Character, IDamage
+public class PlayerCharacter : Character
 {
     [Range(0, 100)] [SerializeField] private int _health = 100;
 
@@ -94,13 +94,17 @@ public class PlayerCharacter : Character, IDamage
     }
 
     [ClientRpc]
-    public void RpcTakeDamage(int damage)
+    public void RpcHit(int damage)
     {
-        _health -= damage;
+        if (hasAuthority)
+        {
+            _health -= damage;
 
-        if (_health <= 0){
-            _health = 0;
-            NetworkManager.singleton.StopClient();
+            if (_health <= 0)
+            {
+                _health = 0;
+                NetworkManager.singleton.StopClient();
+            }
         }
         
     }

@@ -7,11 +7,8 @@ public class Bullet : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        var damage = other.TryGetComponent<IDamage>(out var component);
-        if (damage)
-        {
-            component.RpcTakeDamage(10);
-        }
+        //var damage = other.TryGetComponent<PlayerCharacter>(out var component);
+        
         gameObject.SetActive(false);
     }
 }

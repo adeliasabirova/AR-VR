@@ -62,6 +62,9 @@ public class RayShooter : FireAction
             var rb = shoot.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * _bulletForce);
             rb.AddTorque(Random.insideUnitSphere * _bulletTorque);
+
+            CmdDoShoot(_bulletStartPosition.position, transform.forward);
+
             yield return new WaitForSeconds(2.0f);
             shoot.SetActive(false);
         }

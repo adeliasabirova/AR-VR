@@ -13,6 +13,7 @@ public abstract class FireAction : NetworkBehaviour
     [SerializeField] protected float _bulletForce;
     [SerializeField] protected float _bulletTorque;
     [SerializeField] protected Transform _bulletStartPosition;
+    [SerializeField] protected int _damage;
 
     protected string countBullet = string.Empty;
     protected Queue<GameObject> bullets = new Queue<GameObject>();
@@ -85,6 +86,19 @@ public abstract class FireAction : NetworkBehaviour
         else
         {
             return bullets;
+        }
+    }
+
+    [Command]
+    protected void CmdDoShoot(Vector3 start, Vector3 direction)
+    {
+        var ray = new Ray(start, direction);
+        if(Physics.Raycast(ray, out var hit))
+        {
+            if(hit.collider.TryGetComponent<PlayerCharacter>(out var playerCharacter))
+            {
+                playerCharacter.RpcHit(_damage);
+            }
         }
     }
 
