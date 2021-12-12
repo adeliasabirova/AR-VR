@@ -2,6 +2,7 @@
 
 namespace Project
 {
+
     internal sealed class ObjectInitialization: IInitialize
     {
         private Transform _objectTransform;
@@ -30,5 +31,6 @@ namespace Project
         }
 
         public Transform ObjectTransform => _objectTransform;
+        
     }
 }

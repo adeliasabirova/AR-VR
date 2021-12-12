@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    public interface IGUI
+    public interface IGUI : IController
     {
         void Gui();
     }

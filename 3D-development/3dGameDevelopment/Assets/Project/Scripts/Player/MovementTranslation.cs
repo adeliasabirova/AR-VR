@@ -2,14 +2,16 @@
 
 namespace Project
 {
-    internal sealed class MovementTranslation : IMoveTranslation
+    internal sealed class MovementTranslation : IMove
     {
         public Vector3 Speed { get; private set; }
 
-        public void Move(float directionX, float directionZ, float speed, float deltaTime)
+        public void Move(float horizontal, float vertical, Vector3 cameraRight, Vector3 cameraForward)
         {
-            Vector3 direction = new Vector3(directionX, 0, directionZ);
-            Speed = direction * speed * deltaTime;
+            var cameraDirection = Vector3.Scale(cameraForward, new Vector3(1, 0, 1)).normalized;
+            Speed = (vertical * cameraDirection + horizontal * cameraRight).normalized;
+            if (Speed.magnitude > 1f)
+                Speed.Normalize();
         }
     }
 }
