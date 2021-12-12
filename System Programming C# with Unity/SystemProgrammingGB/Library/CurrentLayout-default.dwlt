@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 1007
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 271}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 79
+  controlID: 95
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -384,13 +384,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/SpaceShips/Scenes
+    - Assets/Shaders/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/SpaceShips/Scenes
+  - Assets/Shaders/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\adely\source\repos\AR-VR\System Programming C# with
     Unity\SystemProgrammingGB
@@ -398,9 +398,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 6a490000
-    m_LastClickedID: 18794
-    m_ExpandedIDs: 000000003e490000404900004249000000ca9a3b
+    m_SelectedIDs: 7c490000
+    m_LastClickedID: 18812
+    m_ExpandedIDs: 000000006249000064490000664900008e49000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -428,7 +428,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003e4900004049000042490000
+    m_ExpandedIDs: 00000000624900006449000066490000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -545,9 +545,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -4.211363, y: -6.976652, z: 6.642123}
+    m_Target: {x: 5, y: 5, z: 5}
     speed: 2
-    m_Value: {x: -4.211363, y: -6.976652, z: 6.642123}
+    m_Value: {x: 5, y: 5, z: 5}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -594,13 +594,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.030012194, y: -0.88086885, z: 0.46906507, w: -0.056357704}
+    m_Target: {x: 0.024916884, y: -0.97497016, z: 0.14766029, w: 0.1644564}
     speed: 2
-    m_Value: {x: 0.030012196, y: 0.88086885, z: -0.46906507, w: 0.056357704}
+    m_Value: {x: 0.025137879, y: -0.97470427, z: 0.14762, w: 0.16591558}
   m_Size:
-    m_Target: 20.814726
+    m_Target: 1.2934402
     speed: 2
-    m_Value: 20.814726
+    m_Value: 1.2919867
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -653,9 +653,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 6a490000
+      m_SelectedIDs: c04a0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 4afbffff
+      m_ExpandedIDs: 44f6ffff66faffff24fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
