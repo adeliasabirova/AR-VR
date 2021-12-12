@@ -20,10 +20,12 @@ namespace Project
             main.startSpeed = _cloudsData.StartSpeed;
 
             var emission = _clouds.emission;
+            emission.enabled = true;
             emission.rateOverTime = _cloudsData.RateOverTime;
 
 
             var shape = _clouds.shape;
+            shape.enabled = true;
             shape.shapeType = _cloudsData.ShapeType;
             shape.scale = _cloudsData.ScaleBox;
 
@@ -31,6 +33,7 @@ namespace Project
             colorOverLifetime.enabled = true;
             colorOverLifetime.color = _cloudsData.Color;
 
+            _cloudsRenderer.enabled = true;
             _cloudsRenderer.minParticleSize = _cloudsData.MinParticleSize;
             _cloudsRenderer.maxParticleSize = _cloudsData.MaxParticleSize;
 

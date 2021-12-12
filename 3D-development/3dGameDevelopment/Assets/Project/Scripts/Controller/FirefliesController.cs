@@ -18,10 +18,12 @@ namespace Project
             main.startSpeed = _firefliesData.StartSpeed;
 
             var emission = _fireflies.emission;
+            emission.enabled = true;
             emission.rateOverTime = _firefliesData.RateOverTime;
            
 
             var shape = _fireflies.shape;
+            shape.enabled = true;
             shape.shapeType = _firefliesData.ShapeType;
             shape.scale = _firefliesData.ScaleBox;
 

@@ -12,7 +12,7 @@ namespace Project
         private IUserInputProxy _mouseXInputProxy;
         private float _mouseX;
 
-        public CameraController(CameraData cameraData, Transform target, Transform camera, (IUserInputProxy inputHorizontal, IUserInputProxy inputVertical, IUserInputProxy inputMouseX) input)
+        public CameraController(CameraData cameraData, Transform target, Transform camera, (IUserInputProxy inputHorizontal, IUserInputProxy inputVertical, IUserInputProxy inputMouseX, IUserButtonInputProxy inputJump) input)
         {
             _cameraData = cameraData;
             _target = target;

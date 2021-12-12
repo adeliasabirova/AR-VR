@@ -17,3 +17,5 @@ MonoBehaviour:
   _lightingPath: LightingData
   _firefliesPath: FirefliesData
   _cloudsPath: CloudsData
+  _enemyPath: EnemyData
+  _stonePath: StoneData
