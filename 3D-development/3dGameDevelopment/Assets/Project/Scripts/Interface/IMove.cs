@@ -4,6 +4,6 @@ namespace Project
 {
     public interface IMove
     {
-        public void Move(Vector3 Direction);
+        public void Move(float horizontal, float vertical, Vector3 cameraRight, Vector3 cameraForward);
     }
 }

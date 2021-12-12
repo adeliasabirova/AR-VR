@@ -5,21 +5,29 @@ namespace Project
     internal sealed class PlayerInitialization: IInitialize
     {
         private readonly PlayerBodyData _playerData;
-        private Transform _playerTransform;
 
-        public PlayerInitialization(PlayerBodyData playerBodyData, Vector3 position)
+        private Transform _objectTransform;
+        private Transform _bodyTransform;
+
+        public PlayerInitialization(PlayerBodyData playerData, Vector3 position, float scale)
         {
-            _playerData = playerBodyData;
-            var player = Object.Instantiate(_playerData.GetPrefab());
-            player.transform.position = position;
-            _playerTransform = player.transform;
+            _playerData = playerData;
+            _objectTransform = Object.Instantiate(_playerData.GetPrefab());
+            _objectTransform.position = position;
+            _objectTransform.localScale *= scale;
+            _bodyTransform = _objectTransform.GetChild(0);
         }
 
         public void Initialize()
         {
-            
         }
 
-        public Transform PlayerTransform => _playerTransform;
+        public Transform ObjectTransform => _objectTransform;
+        public Transform BodyTransform => _bodyTransform;
+
+        public Player GetPlayer()
+        {
+            return _objectTransform.GetComponent<Player>();
+        }
     }
 }
