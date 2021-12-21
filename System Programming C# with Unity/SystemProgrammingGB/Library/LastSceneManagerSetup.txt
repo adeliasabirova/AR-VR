@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/PostprocessShaders/Scenes/Lesson7Scene.unity
+- path: Assets/RenderPipeline/Scenes/Lesson8MainScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
