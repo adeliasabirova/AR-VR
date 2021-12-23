@@ -5,11 +5,7 @@ namespace SpaceShips
 {
     public class ShipController : NetworkMovableObject
     {
-        public string PlayerName
-        {
-            get => _playerName;
-            set => _playerName = value;
-        }
+        
         protected override float _speed => _shipSpeed;
 
         [SerializeField] private Transform _cameraAttach;
@@ -22,6 +18,11 @@ namespace SpaceShips
         private IShip _ship;
 
         [SyncVar] private string _playerName;
+        public string PlayerName
+        {
+            get => _playerName;
+            set => _playerName = value;
+        }
 
         private void OnGUI()
         {
@@ -88,6 +89,7 @@ namespace SpaceShips
             _ship.OnCollisionEnterChange += CollisionEnterChange;
         }
 
+        [ClientCallback]
         private void Update()
         {
             Movement();
@@ -96,11 +98,11 @@ namespace SpaceShips
         private void CollisionEnterChange()
         {
             Vector3 newPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-            Respawn(newPosition);
+            RpcRespawn(newPosition);
         }
 
         [ClientRpc]
-        private void Respawn(Vector3 position)
+        private void RpcRespawn(Vector3 position)
         {
             _shipObject.gameObject.SetActive(false);
             transform.position = position;
