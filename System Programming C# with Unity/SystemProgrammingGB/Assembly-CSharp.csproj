@@ -80,8 +80,11 @@
     <Compile Include="Assets\Galaxy\Scripts\Interface\ICleanUp.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Controllers\CelestialBodyController.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\ShipController.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\Star.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\ColorPointDrawer.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IExecute.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJobForTransform.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\ColorPoint.cs" />
     <Compile Include="Assets\RenderPipeline\Scripts\CameraRendererPartial.cs" />
     <Compile Include="Assets\Game Chat\Scripts\ServerClient.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\Character.cs" />
@@ -90,11 +93,13 @@
     <Compile Include="Assets\UIShop\Scripts\UIShop.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\SpaceShipSettings.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Main Model\RotationJob.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\StarEditor.cs" />
     <Compile Include="Assets\Game Chat\Scripts\ConstantValues.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution2.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\FireAction.cs" />
     <Compile Include="Assets\Game Chat\Scripts\UIController.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Shaders\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Galaxy\Scripts\GalaxyStarter.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution3.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IController.cs" />
@@ -112,12 +117,14 @@
     <Compile Include="Assets\Galaxy\Scripts\Controllers\Controllers.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\NetworkBehavior.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\PlayerLabel.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\EditorList.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Data\Data.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IInitialize.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\IShip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\EditorScripting\Scripts\StartShader.shader" />
     <None Include="Assets\PostprocessShaders\Textures\PlanetShaderAtmosphere.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
