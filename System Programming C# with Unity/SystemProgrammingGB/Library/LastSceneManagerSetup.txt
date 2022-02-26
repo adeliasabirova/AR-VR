@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Shaders/Scenes/MainScene.unity
+- path: Assets/SpaceShips/Scenes/MainScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
