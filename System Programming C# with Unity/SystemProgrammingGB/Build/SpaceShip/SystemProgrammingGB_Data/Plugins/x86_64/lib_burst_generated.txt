@@ -103,13 +103,19 @@ Library: lib_burst_generated
 --compilation-defines=PACKAGE_ANIMATION
 --compilation-defines=CSHARP_7_OR_LATER
 --compilation-defines=CSHARP_7_3_OR_NEWER
+--compilation-defines=ENABLE_VR_MODULE
+--compilation-defines=ENABLE_XR_MODULE
+--compilation-defines=USING_ANIMATION_MODULE
+--compilation-defines=USING_PHYSICS2D_MODULE
 --compilation-defines=ENABLE_SPRITESHAPE_BURST
 --linker-options=PdbAltPath="SystemProgrammingGB_Data/Plugins/x86_64"
 --output=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\com.unity.multiplayer-hlapi.Runtime.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTCore.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Monetization.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleCore.dll
@@ -117,9 +123,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Netcode.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Advertisements.dll
---root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Stores.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Collections.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Stores.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.2D.SpriteShape.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.SecurityStub.dll
@@ -131,11 +137,15 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTStub.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleMacosStub.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Analytics.DataPrivacy.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Codeless.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleStub.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 --assembly-folder=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -262,13 +272,19 @@ Library: lib_burst_generated
 --compilation-defines=PACKAGE_ANIMATION
 --compilation-defines=CSHARP_7_OR_LATER
 --compilation-defines=CSHARP_7_3_OR_NEWER
+--compilation-defines=ENABLE_VR_MODULE
+--compilation-defines=ENABLE_XR_MODULE
+--compilation-defines=USING_ANIMATION_MODULE
+--compilation-defines=USING_PHYSICS2D_MODULE
 --compilation-defines=ENABLE_SPRITESHAPE_BURST
 --linker-options=PdbAltPath="SystemProgrammingGB_Data/Plugins/x86_64"
 --output=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Plugins\x86_64\lib_burst_generated
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\com.unity.multiplayer-hlapi.Runtime.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Mathematics.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTCore.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Monetization.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleCore.dll
@@ -276,9 +292,9 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Netcode.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Advertisements.dll
---root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Stores.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Collections.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Stores.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.2D.SpriteShape.Runtime.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.SecurityStub.dll
@@ -290,11 +306,15 @@ Library: lib_burst_generated
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.WinRTStub.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleMacosStub.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.Analytics.DataPrivacy.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.Codeless.dll
 --root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\UnityEngine.Purchasing.AppleStub.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Universal.Shaders.dll
+--root-assembly=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll
 --assembly-folder=C:\Users\adely\source\repos\AR-VR\System Programming C# with Unity\SystemProgrammingGB\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
