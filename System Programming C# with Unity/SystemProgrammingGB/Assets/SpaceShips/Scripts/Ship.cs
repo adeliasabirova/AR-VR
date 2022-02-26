@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace SpaceShips
 {
@@ -7,6 +8,7 @@ namespace SpaceShips
     {
         public event Action OnCollisionEnterChange;
 
+        [ClientCallback]
         private void OnCollisionEnter(Collision collision)
         {
             OnCollisionEnterChange?.Invoke();

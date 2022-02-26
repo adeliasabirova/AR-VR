@@ -1,16 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
 namespace SpaceShips
 {
+
     public class SolarSystemNetworkManager : NetworkManager
     {
-        [SerializeField] private InputField _playerName;
+        [SerializeField] private InputField _input;
+        [SyncVar] private string _name;
 
-        private Dictionary<NetworkConnection, string> _playerDictionary;
+        [Command]
+        private void CmdSetName(string name)
+        {
+            _name = name;
+        }
 
         private void SetPort()
         {
@@ -24,7 +29,6 @@ namespace SpaceShips
 
         public void StartHosting()
         {
-            _playerDictionary = new Dictionary<NetworkConnection, string>();
             SetPort();
             base.StartHost();
             
@@ -37,27 +41,19 @@ namespace SpaceShips
             base.StartClient();
         }
 
-        private string SetPlayerName()
-        {
-            var name = _playerName.text;
-            return name;
-        }
-
         public override void OnServerConnect(NetworkConnection conn)
         {
+            CmdSetName(_input.text);
             base.OnServerConnect(conn);
-            string name = SetPlayerName();
-            _playerDictionary.Add(conn, name);
         }
+
 
         public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
         {
             var spawnTransform = GetStartPosition();
 
             var player = Instantiate(playerPrefab, spawnTransform.position, spawnTransform.rotation);
-            _playerDictionary.TryGetValue(conn, out string name);
-            player.GetComponent<ShipController>().PlayerName = name;
-
+            player.GetComponent<ShipController>().RpcSetInput(_name);
             NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
         }
 

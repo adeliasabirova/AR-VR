@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 namespace SpaceShips
 {
     public class ShipController : NetworkMovableObject
-    {
-        
+    {        
         protected override float _speed => _shipSpeed;
 
         [SerializeField] private Transform _cameraAttach;
@@ -17,11 +17,20 @@ namespace SpaceShips
         private Rigidbody _rb;
         private IShip _ship;
 
-        [SyncVar] private string _playerName;
-        public string PlayerName
+        private string _input;
+
+        [ClientRpc]
+        public void RpcSetInput(string input)
         {
-            get => _playerName;
-            set => _playerName = value;
+            _input = input;
+        }
+
+        [SyncVar] private string _playerName;
+
+        [Command]
+        private void CmdSetPlayerName(string name)
+        {
+            _playerName = name;
         }
 
         private void OnGUI()
@@ -35,6 +44,7 @@ namespace SpaceShips
 
         public override void OnStartAuthority()
         {
+            CmdSetPlayerName(_input);
             _rb = GetComponent<Rigidbody>();
             if (_rb == null)
             {
@@ -98,11 +108,11 @@ namespace SpaceShips
         private void CollisionEnterChange()
         {
             Vector3 newPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-            RpcRespawn(newPosition);
+            CmdRespawn(newPosition);
         }
 
-        [ClientRpc]
-        private void RpcRespawn(Vector3 position)
+        [Command]
+        private void CmdRespawn(Vector3 position)
         {
             _shipObject.gameObject.SetActive(false);
             transform.position = position;
@@ -115,9 +125,11 @@ namespace SpaceShips
             _cameraOrbit?.CameraMovement();
         }
 
+        [ClientCallback]
         private void OnDestroy()
         {
             _ship.OnCollisionEnterChange -= CollisionEnterChange;
         }
+
     }
 }
