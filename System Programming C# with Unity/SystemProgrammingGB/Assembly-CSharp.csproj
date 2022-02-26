@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\Lesson1\CoroutineExample.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJob.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJobParallelFor.cs" />
+    <Compile Include="Assets\RenderPipeline\Scripts\SpacePipelineRenderer.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\IDamage.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution1.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\ShipManager.cs" />
@@ -76,38 +77,51 @@
     <Compile Include="Assets\Galaxy\Scripts\Interface\ICleanUp.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Controllers\CelestialBodyController.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\ShipController.cs" />
-    <Compile Include="Assets\SpaceShips\Scripts\UIController.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\Star.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\ColorPointDrawer.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IExecute.cs" />
     <Compile Include="Assets\Scripts\Homework2\AdvancedJobForTransform.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\ColorPoint.cs" />
+    <Compile Include="Assets\RenderPipeline\Scripts\CameraRendererPartial.cs" />
     <Compile Include="Assets\Game Chat\Scripts\ServerClient.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\Character.cs" />
+    <Compile Include="Assets\SpaceShips\Scripts\Ship.cs" />
     <Compile Include="Assets\Game Chat\Scripts\Server.cs" />
+    <Compile Include="Assets\UIShop\Scripts\UIShop.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\SpaceShipSettings.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Main Model\RotationJob.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\StarEditor.cs" />
     <Compile Include="Assets\Game Chat\Scripts\ConstantValues.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution2.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\FireAction.cs" />
     <Compile Include="Assets\Game Chat\Scripts\UIController.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\Bullet.cs" />
+    <Compile Include="Assets\Shaders\Scripts\NewBehaviourScript.cs" />
     <Compile Include="Assets\Galaxy\Scripts\GalaxyStarter.cs" />
     <Compile Include="Assets\Scripts\Homework2\Solution3.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IController.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Main Model\MovementJov.cs" />
     <Compile Include="Assets\Game Chat\Scripts\Client.cs" />
     <Compile Include="Assets\Scripts\Lesson1\SomePopUp.cs" />
+    <Compile Include="Assets\UIShop\Scripts\UIItem.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\CameraOrbit.cs" />
+    <Compile Include="Assets\RenderPipeline\Scripts\SpacePipelineRendererAsset.cs" />
     <Compile Include="Assets\MultiPlayer\Scripts\RayShooter.cs" />
+    <Compile Include="Assets\UIShop\Scripts\IReset.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Controllers\GalaxyInitialization.cs" />
+    <Compile Include="Assets\RenderPipeline\Scripts\CameraRenderer.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\NetworkMovableObject.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Controllers\Controllers.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\PlayerLabel.cs" />
+    <Compile Include="Assets\EditorScripting\Scripts\EditorList.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Data\Data.cs" />
     <Compile Include="Assets\Galaxy\Scripts\Interface\IInitialize.cs" />
-    <Compile Include="Assets\SpaceShips\Scripts\Ship.cs" />
     <Compile Include="Assets\SpaceShips\Scripts\IShip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\EditorScripting\Scripts\StartShader.shader" />
+    <None Include="Assets\PostprocessShaders\Textures\PlanetShaderAtmosphere.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
@@ -117,17 +131,21 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\PostprocessShaders\Textures\StencilHole.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\PostprocessShaders\Textures\LambertEmissionShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\PostprocessShaders\Textures\PlanetShader.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\Shaders\Textures\GeometryShader.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -739,6 +757,9 @@
     <Reference Include="Unity.2D.PixelPerfect">
       <HintPath>Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Purchasing">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
@@ -751,6 +772,9 @@
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Searcher.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Netcode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Editor.dll</HintPath>
     </Reference>
@@ -762,6 +786,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Analytics">
       <HintPath>Library\ScriptAssemblies\Analytics.dll</HintPath>
@@ -778,11 +805,17 @@
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
       <HintPath>Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Netcode.Components">
       <HintPath>Library\ScriptAssemblies\Unity.Netcode.Components.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Codeless">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Codeless.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
@@ -802,6 +835,9 @@
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
       <HintPath>Library\ScriptAssemblies\com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
@@ -819,6 +855,9 @@
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
@@ -838,6 +877,9 @@
     <Reference Include="UnityEngine.Purchasing.SecurityCore">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
       <HintPath>Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
@@ -846,6 +888,9 @@
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing.Stores">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
@@ -867,6 +912,9 @@
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
       <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
